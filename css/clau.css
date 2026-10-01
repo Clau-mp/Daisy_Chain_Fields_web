@@ -30,7 +30,21 @@
 
     /* Tamaño de fuentes  */
 
+
     
+    --nav-h: 90px
 
+}
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(--nav-h +16px);
 }
