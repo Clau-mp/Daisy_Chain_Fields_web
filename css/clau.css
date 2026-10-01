@@ -1,0 +1,36 @@
+@font-face {
+    font-family: The Bold Font;
+    src: url(../media/fonts/THEBOLDFONT-FREEVERSION.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+
+    /* Tipografias */
+    --main-font: "Libre Franklin", sans-serif; 
+    --title-font: "The Bold Font", san-serif;
+
+    /* Pesos tipografia Libre Franklin */
+    --LF-regular: 400;
+    --LF-bold: 700;
+    --LF-extrabold: 800;
+
+    /* Colores  */
+
+    --pastel-pink: #FDAFCB;
+    --dark-pink: #E06286;
+    --yellow: #FFE778;
+    --green: #89D886;
+    --orange: #F28020;
+    --blue: #73E6FF; 
+    --pastel-white: #FDFBF0;
+    --white: #FFFFFF;
+    --black: #1A1A1A;
+
+    /* Tamaño de fuentes  */
+
+    
+
+
+}
