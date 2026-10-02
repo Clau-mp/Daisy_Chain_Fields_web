@@ -9,12 +9,12 @@
 
     /* Tipografias */
     --main-font: "Libre Franklin", sans-serif; 
-    --title-font: "The Bold Font", san-serif;
+    --title-font: "The Bold Font", sans-serif;
 
     /* Pesos tipografia Libre Franklin */
     --LF-regular: 400;
     --LF-bold: 700;
-    --LF-extrabold: 800;
+    --LF-extrabold: 900;
 
     /* Colores  */
 
@@ -30,9 +30,19 @@
 
     /* Tamaño de fuentes  */
 
+    --medium-text-size:1.3rem;
+    --title-text-size:2rem;
+    --bt-text-size:1.4rem;
 
+    --title-text-size-tablet:1.7rem;
+    --bt-text-size-tablet: 1.2rem;
+
+    --title-text-size-phone:1.5rem;
+    --bt-text-size-phone: 0.9rem;
     
-    --nav-h: 90px
+    --nav-h: 6rem;
+    --btn-transition: transform 0.3s ease, color 0.3s ease;
+    --text-transition: color 0.2s ease;
 
 }
 
@@ -46,5 +56,220 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: calc(--nav-h +16px);
+    scroll-padding-top: calc(var(--nav-h) + 1rem);
 }
+
+
+body.menu-open{
+    overflow: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: var(--main-font);
+    color: var(--black);
+    font-size: 1.05rem; /*cambiar*/
+    transition: 0.3s ease;
+    background-color: var(--pastel-white);
+    min-height: 100vh;
+}
+
+/* Heather */
+
+header{
+    position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: var(--nav-h);
+   padding: 0 1.5rem;
+   background-color: var(--black);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+
+}
+
+.icons-menu{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--white);
+    z-index: 1002;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+
+}
+
+.icon-ham{
+    display: inline-block;
+    transition: var(--btn-transition);
+}
+
+.icons-menu:hover > .icon-ham {
+    color: var(--dark-pink);
+    transform: rotate(70deg);
+}
+
+.icon-flower{
+    display: none !important;
+    font-size: 2.5rem !important;
+    transition: var(--btn-transition);
+}
+
+.icons-menu.active > .icon-ham{
+    display: none;
+}
+
+.icons-menu.active > .icon-flower{
+    display: inline-block !important;
+}
+.icons-menu.active:hover > .icon-flower{
+    color: var(--dark-pink)!important;
+    transform: rotate(70deg)!important;
+}
+
+.main-logo >img{
+    display: block;
+    height: 3rem;
+}
+
+.drawer-menu{
+    position: fixed;
+    top: var(--nav-h);
+    left: -100%;
+    width: 16rem;
+    max-width: 22rem;
+    height: calc(70vh - var(--nav-h));
+    background-color: var(--black);
+    padding-top: calc(var(--nav-h)+ 1rem);
+    transition: left 0.5s ease-in-out, opacity 0.5s ease;
+    z-index: 999;
+    
+}
+
+.drawer-menu.open{
+    left: 0;
+}
+
+.drawer-menu > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+}
+
+.drawer-menu > ul> li > a{
+    color: var(--white);
+    font-family: var(--main-font);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: var(--title-text-size);
+    text-transform: uppercase;
+    display: inline-block;
+    transition:var(--text-transition) ;
+    margin-left: 2rem;
+    margin-bottom: 0.8rem;
+
+
+}
+
+.drawer-menu > ul > li> a:hover{
+    color: var(--dark-pink);
+}
+
+.tickets-heather-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+    font-weight: var(--LF-extrabold);
+    font-size: var(--bt-text-size);
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--dark-pink);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-right: 1.5rem;
+
+    transition: var(--btn-transition);
+}
+.tickets-heather-btn:hover{
+    color: var(--pastel-pink);
+    background-color: var(--black);
+}
+
+
+@media screen and (max-width:768px){
+
+    /* barra de navegación */
+
+    header{
+        padding: 0 1.2rem;
+    }
+
+    .main-logo > img {
+        height: 2.5rem;
+    }
+    .icons-menu{
+        font-size: 1.8rem;
+        margin-left: 0;
+    }
+    .icon-flower{
+        font-size: 2.3rem;
+    }
+
+    .drawer-menu{
+        width: 35vw;
+    }
+    .drawer-menu > ul> li > a{
+        font-size: var(--title-text-size-tablet);
+        margin-left: 0;
+    }
+
+    .tickets-heather-btn{
+        font-size: var(--bt-text-size-tablet);
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    
+    header{
+        padding: 0 0.8rem;
+    }
+
+    .main-logo > img {
+        height: 1.6rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .icons-menu{
+        font-size: 1.3rem;
+    }
+    .icon-flower{
+        font-size: 1.8rem;
+    }
+
+    .drawer-menu{
+        width: 100vh;
+        max-width: 100%;
+        height: 100%;
+    }
+    .drawer-menu > ul> li > a{
+        font-size: var(--title-text-size-phone);
+        margin-left: 3rem;
+    }
+
+    .tickets-heather-btn{
+        font-size: var(--bt-text-size-phone);
+    }
+
+}
+    
+
+
