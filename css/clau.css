@@ -238,7 +238,8 @@ header{
 }
 
 @media screen and (max-width:480px) {
-    
+   
+    /* barra de navegación  */
     header{
         padding: 0 0.8rem;
     }
