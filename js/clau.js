@@ -35,13 +35,41 @@
         } else{ openMenu();}
     })}
 
-    menuOverlay.addEventListener("click", closeMenu)
+   if(menuOverlay){ menuOverlay.addEventListener("click", closeMenu)}
 
-    var links = drawerMenu.querySelectorAll("a");
+   if(drawerMenu){var links = drawerMenu.querySelectorAll("a");
+    
+    for( var i = 0; i < links.length; i++){
+        links[i].addEventListener("click", closeMenu);
+    }
 
+      
+    }
+    
     for( var i = 0; i < links.length; i++){
         links[i].addEventListener("click", closeMenu);
     }
 
         
 })();
+
+
+// Hero
+
+document.addEventListener("DOMContentLoaded", function(){
+    var photos = document.querySelectorAll(".hero-photos-container .hero-photo");
+    var currentIndex = 0;
+    var intervalTime = 3000;
+
+    if (photos.length > 0){
+        function changePhotos() {
+            photos[currentIndex].classList.remove("hero-photo-activate");
+            currentIndex = (currentIndex + 1) % photos.length;
+            photos[currentIndex].classList.add("hero-photo-activate");
+        }
+
+    setInterval (changePhotos, intervalTime)
+    }
+    
+
+});

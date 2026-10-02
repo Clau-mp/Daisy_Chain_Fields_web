@@ -40,9 +40,11 @@
     --title-text-size-phone:1.5rem;
     --bt-text-size-phone: 0.9rem;
     
+    /* Transiciones y medidas */
     --nav-h: 6rem;
     --btn-transition: transform 0.3s ease, color 0.3s ease;
     --text-transition: color 0.2s ease;
+    --shadow:0 0.20rem 0.62rem rgb(0,0,0.3);
 
 }
 
@@ -253,9 +255,9 @@ header{
 }
 .hero-logo > img{
     width: 100%;
-    opacity: 0.6;
+    opacity: 0.7;
     height: auto;
-    filter: drop-shadow(0 0.25rem 0.625rem rgb(0,0,0.3));
+    filter: drop-shadow var(--shadow);
 }
 
 /* Media queries */
