@@ -203,6 +203,62 @@ header{
     background-color: var(--black);
 }
 
+/* Hero home */
+
+.hero-container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--nav-h));
+    margin-top: var(--nav-h);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.hero-photos-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.3s ease-in-out;
+    user-select: none;
+    pointer-events: none;
+
+}
+.hero-photo-activate{
+    opacity: 1;
+}
+
+.hero-logo{
+    position: relative;
+    z-index: 13;
+    width: 80%;
+    max-width: 40.8rem;
+    text-align: center;
+    pointer-events: none;
+    margin-bottom: 6rem;
+}
+.hero-logo > img{
+    width: 100%;
+    opacity: 0.6;
+    height: auto;
+    filter: drop-shadow(0 0.25rem 0.625rem rgb(0,0,0.3));
+}
+
+/* Media queries */
 
 @media screen and (max-width:768px){
 
