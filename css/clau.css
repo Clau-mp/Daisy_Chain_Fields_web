@@ -68,7 +68,7 @@ body{
     overflow-x: hidden;
     font-family: var(--main-font);
     color: var(--black);
-    font-size: 1.05rem; /*cambiar*/
+    font-size: var(--medium-text-size); 
     transition: 0.3s ease;
     background-color: var(--pastel-white);
     min-height: 100vh;
