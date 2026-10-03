@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=filter_vintage" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body class="body-home">
     <header>
         <div  id="iconMenu" class="icons-menu">
@@ -33,6 +34,45 @@
             </ul>
         </nav>
     </header>
+
+    <!-- sing up -->
+    <button id="close-sing-up-btn" class="sing-up-btn">sing up <span>▲</span></button>
+    
+    <div id="sing-up-background" class="sing-up-background">
+        <div id="open-sing-up-modal" class="sing-up-modal">
+            <button class="close-modal-btn" id="close-modal-btn">X</button>
+            <img class="modal-logo" src="media/photos/Daisy-Chain-White-logo.svg" alt="Daisy Chain Logo">
+            <p class="sing-up-title-text">sing up to recive updater from:</p>
+            <form class="form-sing-up" novalidate>
+                <input class="enter-email-imput" type="email" name="email" placeholder="Enter your email:">
+                <select class="select-country" name="country" id="country">
+                    <option value="" data-pref="">Country</option>
+                    <option data-pref="+34">Spain</option>
+                    <option data-pref="+1">United States</option>
+                    <option data-pref="+44">United Kingdom</option>
+                    <option data-pref="+52">Mexico</option>
+                    <option data-pref="+1">Canada</option>
+                    <option data-pref="+33">France</option>
+                    <option data-pref="+39">Italy</option>
+                </select>
+                <p class="phone-number-text">Only provide a mobile number if you want to receive SMS updates:</p>
+                <input class="phone-number-imput" type="tel" id="phone-number-imput" name="phone-number" placeholder="+35">
+                <div class="sing-up-cheks">
+                    <p>Sign up to receive email updates and the presale code from:</p>
+                    <label class="sing-up-check">
+                        <input type="checkbox" value="Daisy Chain Fields" name="artist">Daisy Chain Fields
+                    </label>
+                    <label class="sing-up-check">
+                        <input type="checkbox" value="Olivia Rodrigo" name="artist">Olivia Rodrigo
+                    </label>
+                </div>
+                 <button type="submit" class="submit-btn">SING UP</button>
+            </form>
+            <p class="legal-text-sing-up">emails will be sent by or on behalf of umg recordings services, inc. 2220 colorado avenue, santa monica, ca 90404 (310) 865-4000. you may withdraw your consent at any time. see privacy policy at http://privacy.umusic.com.﻿</p>
+        
+        </div>
+    </div>
+    <!-- Home -->
     <section id="hero" class="hero-container">
         <div class="hero-photos-container">
             <img src="media/photos/daisy-chain-home-photos-1.webp" class="hero-photo hero-photo-activate" alt="Daisy Chain photo 1">
@@ -49,6 +89,37 @@
         </div>
         <div class="hero-badge">
             <img src="media/photos/badge-1.webp" alt="Flower">
+        </div>
+    </section>
+    <section id="home-flower-cards" class="home-flower-cards">
+        <div class="flower-cards-container">
+            <div class="card-flower">
+                <div class="card-flower-int">
+                    <div class="card-flower-icon">
+                        <img src="" alt="Orange flower icon">
+                    </div>
+                    <h3 class="card-flower-title">DONATE TO THE DAISY CHAIN FIELDS FUND</h3>
+                    <a  class="card-flower-btn" href="donate.html">DONATE NOW!</a>
+                </div>
+            </div>
+            <div class="card-flower">
+                <div class="card-flower-int">
+                    <div class="card-flower-icon">
+                        <img src="" alt="Yellow flower icon">
+                    </div>
+                    <h3 class="card-flower-title"></h3>
+                    <a  class="card-flower-btn" href=""></a>
+                </div>
+            </div>
+            <div class="card-flower">
+                <div class="card-flower-int">
+                    <div class="card-flower-icon">
+                        <img src="" alt="Green flower icon">
+                    </div>
+                    <h3 class="card-flower-title"></h3>
+                    <a  class="card-flower-btn" href=""></a>
+                </div>
+            </div>
         </div>
     </section>
     <script src="js/clau.js"></script>
