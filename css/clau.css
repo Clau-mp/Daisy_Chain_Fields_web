@@ -452,6 +452,110 @@ header{
 .body-donate{
     background-color:var(--yellow);
 }
+
+/* DONATE  */
+
+.donate-pins{
+    margin-top: var(--nav-h);
+    padding: 2rem 1rem;
+}
+
+.donate-pins-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.donate-pin{
+    width: calc((100% - 4.5rem) /3 );
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.donate-pin > img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.donate-pin:hover{
+    transform: scale(1.15);
+}
+.donate-pin-info{
+    display: none;
+}
+
+.pin-modal-background{
+    position: fixed;
+    top: calc(var(--nav-h) + 1rem);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.463);
+    z-index: 1004;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    display: none;
+}
+.pin-modal-background.open{
+    display: flex;
+}
+.pin-modal{
+    position: relative;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: var(--main-font);
+    width: 100%;
+    max-width: 29rem;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 2rem 1.75rem;
+    border-radius: 1rem;
+}
+.close-pin-modal-btm{
+    position: absolute;
+    top: 1rem;
+    right:1.2rem ;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--black);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.pin-modal-img{
+    display: block;
+    width: 100%;
+    max-width: 14rem;
+    height: auto;
+    margin: 0 auto 1.5rem;
+}
+.pin-modal-content > h3{
+    font-family: var(--title-font);
+    font-size: var(--title-text-size);
+    margin-bottom: 1rem;
+}
+.pin-modal-content > p{
+    font-size: var(--normal-text-size);
+    font-weight: var(--LF-regular);
+    margin-bottom: 1.5rem;
+}
+.pin-modal-content > a {
+    display: inline-block;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--black);
+    color:  var(--black);
+    font-family: var(--main-font);
+    font-weight: var(--LF-bold);
+    font-size: var(--normal-text-size);
+    text-decoration: none;
+
+}
+
+
 /* Media queries */
 
 @media screen and (max-width:768px){
