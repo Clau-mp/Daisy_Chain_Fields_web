@@ -162,20 +162,25 @@
 /* SETLIST */
 
 .titulo-setlist {
-    padding: 12rem 10rem;
+    padding: 15rem 10rem;
     background-image: url(papel_textura.jpg);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
+    padding:  0px 100px;
 }
 
-.titulo-setlist > div {
-    align-items: center;
+.titulo-setlist {
+    /* color: var(--white); */
+    text-align: center;
+    padding: 30px 100px;
+    font: var(--title-font);
+    font-weight: 900;
+    font-size: 50px;
 }
 
 .titulo-setlist > .setlist-imagen {
-    display: flex;
-    align-items: center;
+    display: flex;    
 }
 
 .titulo-setlist > .setlist-imagen > img {
