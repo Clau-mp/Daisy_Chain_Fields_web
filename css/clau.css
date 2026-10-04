@@ -44,7 +44,7 @@
     /* Transiciones y medidas */
     --nav-h: 6rem;
     --btn-transition: transform 0.3s ease, color 0.3s ease;
-    --text-transition: color 0.2s ease;
+    --text-transition: color 0.5s ease;
     --shadow:0 0.20rem 0.62rem rgb(0,0,0.3);
     --rotate-badge-animation:rotateBadge 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 
@@ -212,7 +212,7 @@ header{
     background-color: var(--black);
 }
 
-/* Sing up pop up */
+/* SING UP  */
 
 .sing-up-btn{
     position: fixed;
@@ -266,10 +266,10 @@ header{
     font-weight: var(--LF-regular);
     color: var(--black);
     width: 100%;
-    max-width:520px;
+    max-width:500px;
     max-height: 100%;
     margin-top: 3rem;
-   padding: 2rem 2.75rem 2.25rem;
+   padding: 2rem 1.75rem 2.25rem;
    text-align: center;
    border-radius: 1rem;
 }
@@ -281,7 +281,7 @@ header{
     background: none;
     border: none;
     color: var(--black);
-    font-size: 2.3rem;
+    font-size: 2rem;
     line-height: 1;
     cursor: pointer;
 }
@@ -289,14 +289,14 @@ header{
 .modal-logo{
     display: block;
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
     margin: 6px auto 37px;
 
 }
 
 .sing-up-title-text{
-    font-size: var(--normal-text-size);
+    font-size: var(--medium-text-size);
     margin: 0 0 9px;
 }
 
@@ -305,12 +305,12 @@ header{
     width: 100%;
     height: 3rem;
     margin-bottom: 1.4rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.8rem;
     background: transparent;
     color: var(--black);
     border: 0.2rem solid var(--white);
     border-radius: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .enter-email-input::placeholder, .phone-number-input::placeholder{
@@ -319,7 +319,7 @@ header{
 }
 
 .phone-number-text, .sing-up-cheks > p {
-    font-size:1rem;
+    font-size:0.9rem;
     margin: 0 0 11px;
     text-align: left;
 }
@@ -327,7 +327,7 @@ header{
     display: flex;
     align-items: center;
     gap:14px;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.1rem;
     font-size: 1.1rem;
     cursor: pointer;
 }
@@ -343,8 +343,28 @@ header{
     border-radius: 0.2rem;
     cursor: pointer;
 }
+.submit-btn{
+    display: block;
+    padding:0.8rem 2rem;
+    background-color: var(--white);
+    color: var(--pastel-pink);
+    font-weight: var(--LF-extrabold);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 1rem 9rem 1rem; 
+    font-size: var(--bt-text-size-tablet);
+    transition: var(--text-transition);
+}
+.submit-btn:hover{
+   background-color: var(--black);
+}
+.legal-text-sing-up{
+    margin: 0;
+    font-size: 0.7rem;
+}
 
-/* Hero home */
+/* HERO HOME */
 
 .hero-container{
     position: relative;
