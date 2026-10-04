@@ -20,7 +20,7 @@
 
     --pastel-pink: #FDAFCB;
     --dark-pink: #E06286;
-    --yellow: #FFE778;
+    --yellow: #FFED9B;
     --green: #89D886;
     --orange: #F28020;
     --blue: #73E6FF; 
@@ -446,6 +446,11 @@ header{
 @keyframes rotateBadge{
     0%{transform: rotate(-18deg);}
     100%{ transform: rotate(22deg);}
+}
+
+
+.body-donate{
+    background-color:var(--yellow);
 }
 /* Media queries */
 

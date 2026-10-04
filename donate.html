@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=filter_vintage" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body>
+<body class="body-donate">
     <header>
         <div  id="iconMenu" class="icons-menu">
             <i class="fa-solid fa-bars icon-ham"></i>
@@ -33,6 +33,139 @@
             </ul>
         </nav>
     </header>
-      <script src="js/clau.js"></script>
+     <!-- sing up -->
+    <button id="close-sing-up-btn" class="sing-up-btn">sing up <span>▲</span></button>
+    
+    <div id="sing-up-background" class="sing-up-background">
+        <div id="open-sing-up-modal" class="sing-up-modal">
+            <button class="close-modal-btn" id="close-modal-btn">X</button>
+            <img class="modal-logo" src="media/photos/Daisy-Chain-Black-logo.webp" alt="Daisy Chain Logo">
+            <p class="sing-up-title-text">sign up to receive updates from:</p>
+            <form class="form-sing-up" required>
+                <input class="enter-email-input" type="email" name="email" placeholder="Enter your email:" required>
+                <select class="select-country" name="country" id="country" required>
+                    <option value="" data-pref="">Country</option>
+                    <option data-pref="+34">Spain</option>
+                    <option data-pref="+1">United States</option>
+                    <option data-pref="+44">United Kingdom</option>
+                    <option data-pref="+52">Mexico</option>
+                    <option data-pref="+1">Canada</option>
+                    <option data-pref="+33">France</option>
+                    <option data-pref="+39">Italy</option>
+                </select>
+                <p class="phone-number-text">Only provide a mobile number if you want to receive SMS updates:</p>
+                <input class="phone-number-input" type="tel" id="phone-number-input" name="phone-number" placeholder="+35" required>
+                <div class="sing-up-cheks">
+                    <p>Sign up to receive email updates and the presale code from:</p>
+                    <label class="sing-up-check">
+                        <input type="checkbox" value="Daisy Chain Fields" name="artist">Daisy Chain Fields
+                    </label>
+                    <label class="sing-up-check">
+                        <input type="checkbox" value="Olivia Rodrigo" name="artist" >Olivia Rodrigo
+                    </label>
+                </div>
+                 <button type="submit" class="submit-btn">SING UP</button>
+            </form>
+            <p class="legal-text-sing-up">emails will be sent by or on behalf of umg recordings services, inc. 2220 colorado avenue, santa monica, ca 90404 (310) 865-4000. you may withdraw your consent at any time. see privacy policy at http://privacy.umusic.com.﻿</p>
+        
+        </div>
+    </div>
+    <!-- Donate pins -->
+     
+    <section id="donate-pins" class="donate-pins">
+        <div class="donate-pins-container">
+            <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_1.webp" alt="Baby2Baby">
+                <div class="donate-pin-info">
+                    <h3>Baby2Baby</h3>
+                    <p>Baby2Baby provides children in need with diapers, formula, clothing, and the basic necessities that every child deserves, serving more than one million children across all 50 states.</p>
+                    <a href="https://baby2baby.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_2.webp" alt="Planned Parenthood">
+                <div class="donate-pin-info">
+                    <h3>Planned Parenthood</h3>
+                    <p>Planned Parenthood serves as an essential provider and advocate of sexual and reproductive health care, and sex education, supporting millions of people across the United States.</p>
+                    <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_3.webp" alt="National Women's Law Center">
+                <div class="donate-pin-info">
+                    <h3>National Women's Law Center</h3>
+                    <p>The National Women’s Law Center defends and protects the rights and freedoms of women, girls, and the LGBTQ+ community through law, policy, and culture change – with a particular focus on addressing the inequities faced by women of color and low-income women and families.</p>
+                    <a href="https://nwlc.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_4.webp" alt="National Domestic Workers Alliance">
+                <div class="donate-pin-info">
+                    <h3>National Domestic Workers Alliance</h3>
+                    <p></p>
+                    <a href="https://www.domesticworkers.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_5.webp" alt="Johns Hopkins Center for Indigenous Health">
+                <div class="donate-pin-info">
+                    <h3>Johns Hopkins Center for Indigenous Health</h3>
+                    <p>Johns Hopkins Center for Indigenous Health brings together Indigenous knowledge, community wisdom, and public health practice to advance health equity and support thriving, healthier, and stronger Indigenous communities worldwide.</p>
+                    <a href="https://cih.jhu.edu/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_6.webp" alt="National Institute for Reproductive Health">
+                <div class="donate-pin-info">
+                    <h3>National Institute for Reproductive Health</h3>
+                    <p>National Institute for Reproductive Health builds a future where reproductive freedom, without limits, is a reality by partnering with state and local reproductive health, rights, and justice organizations on policy advocacy.</p>
+                    <a href="https://nirhealth.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_7.webp" alt="Jhpiego">
+                <div class="donate-pin-info">
+                    <h3>Jhpiego</h3>
+                    <p>Jhpiego helps women and communities around the world live healthier, stronger lives.</p>
+                    <a href="https://jhpiego.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_8.webp" alt="Freefrom">
+                <div class="donate-pin-info">
+                    <h3>Freefrom</h3>
+                    <p>FreeFrom is a national survivor-led organization working to end gender-based violence by building economic freedom alongside survivors.</p>
+                    <a href="https://www.freefrom.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Parther_pin_9.webp" alt="Center For Reproductive Rights">
+                <div class="donate-pin-info">
+                    <h3>Center For Reproductive Rights</h3>
+                    <p>The Center for Reproductive Rights uses the power of law and advocacy to advance reproductive rights and health care access worldwide.</p>
+                    <a href="https://reproductiverights.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+             </div>
+             <div class="donate-pin">
+                <img src="media/photos/partners/Partner_pin_10.webp" alt="Black Mamas Matter Alliance">
+                <div class="donate-pin-info">
+                    <h3>Black Mamas Matter Alliance</h3>
+                    <p>Black Mamas Matter Alliance (BMMA, Inc.) is the nation's premier Black Maternal Health organization ensuring that all Black Mamas have the rights, respect, and resources to thrive before, during, and after pregnancy.</p>
+                    <a href="https://blackmamasmatter.org/" target="_blank" rel="noopener noreferrer">LEARN MORE -></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="js/clau.js"></script>
 </body>
 </html>
