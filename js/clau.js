@@ -54,6 +54,40 @@
 })();
 
 
+// SING UP BTN AND MODAL
+
+var openSingUp = document.getElementById("close-sing-up-btn");
+var closeSingUp = document.getElementById("close-modal-btn");
+var showSingUp = document.getElementById("sing-up-background");
+var selectCountry = document.getElementById("country");
+var phoneNumber = document.getElementById("phone-number-input");
+
+function openModal(){
+    showSingUp.classList.add("open");
+    openSingUp.classList.add("open");
+}
+function closeModal(){
+    showSingUp.classList.remove("open");
+    openSingUp.classList.remove("open");
+}
+
+openSingUp.addEventListener("click", openModal);
+closeSingUp.addEventListener("click", closeModal);
+
+
+showSingUp.addEventListener("click", function(e){
+    if (e.target === showSingUp){
+        closeModal();
+    }
+})
+selectCountry.addEventListener("change", function(){
+    var prefix = selectCountry.options[selectCountry.selectedIndex].dataset.pref;
+    if(prefix && (!phoneNumber.value|| /^\+\d*$/.test(phoneNumber.value))){
+        phoneNumber.value = prefix
+    }
+});
+
+
 // Hero
 
 document.addEventListener("DOMContentLoaded", function(){
