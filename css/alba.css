@@ -108,15 +108,17 @@
 
 /* MAPA  */
 
-.titulo-mapa {
+.mapa {
     padding: 12rem 10rem;
     background-image: url(cesped_textura.jpg);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
+    text-align: center;
+    width: 100%;
 }
 
-.titulo-mapa > div > h1 {
+.titulo-mapa > .texto-mapa > h1 {
     /* color: var(--white); */
     text-align: center;
     padding: 30px 100px;
@@ -124,41 +126,50 @@
     font-size: 40px;
 }
 
-.titulo-mapa > div > h3 {
+.titulo-mapa > .texto-mapa > h3 {
     /* color: var(--white); */
     text-align: center;
     font-family: var(--title-font);
     font-size: 30px;
 }
 
-.mapa-imagen > div {
+.mapa-elementos {
+    position: relative;
+    max-width: 80%;
+}
+
+.mapa-elementos > .mapa-imagen {
+    padding: 1rem;
+    background-color: var(--pastel-white);    
     border-radius: 1rem;
-    border: 1rem solid var(--pastel-white);
+
+}
+
+.mapa-elementos > .mapa-imagen > img{
     border-image-width: 1rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    /* background-size: cover; */
     /* margin-top: 4rem; */
 }
 
-.mapa-imagen > div > img {
-    /* padding: 12rem 10rem; */
-    background-size: cover;
-    max-width: 100%;
-}
-
-.chapas-mapa {
+.mapa-elementos > .chapas-mapa > img {
     max-width: 40%;
     align-items: center;
 }
 
-.chapas-mapa > :first-child {
+.mapa-elementos > .chapas-mapa > :first-child {
     max-width: 50%;
     transform: rotate(5);
 }
 
-.chapas-mapa > :last-child {
+.mapa-elementos > .chapas-mapa > :last-child {
     max-width: 30%;
 }
 
-.texto-postit > p {
+.mapa-elementos > .texto-postit > p {
     font-size: var(--bt-text-size);
     font-family: var(--main-font);
 }
