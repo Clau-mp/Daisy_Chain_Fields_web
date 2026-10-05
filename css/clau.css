@@ -453,6 +453,28 @@ header{
     background-color:var(--yellow);
 }
 
+/* Flower cards home */
+
+.home-flower-cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 3rem 1rem;
+}
+.flower-cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   max-width: 1200px;
+   width: 100%;
+   gap: 2rem;
+
+
+}
+
 /* DONATE  */
 .donate-intro{
     margin-top: var(--nav-h);
