@@ -22,7 +22,7 @@
     --dark-pink: #E06286;
     --yellow: #FFE778;
     --green: #89D886;
-    --orange: #F28020;
+    --orange: #FFA961;
     --blue: #73E6FF; 
     --pastel-white: #FDFBF0;
     --white: #FFFFFF;
@@ -110,7 +110,7 @@
 
 .mapa {
     padding: 12rem 10rem;
-    background-image: url(cesped_textura.jpg);
+    background-image: url(cesped_textura.webp);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -178,7 +178,7 @@
 
 .titulo-setlist {
     padding: 12rem 10rem;
-    background-image: url(papel_textura.jpg);
+    background-image: url(papel_textura.webp);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -226,3 +226,28 @@
     grid-template: repeat(2, 1fr);
 }
 } */
+
+/* TICKETS */
+
+.tickets {
+    padding: 12rem 10rem;
+    background-image: url(flores_naranjas.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    text-align: center;
+    width: 100%;
+}
+.tickets > .titulo-tickets {
+    font-family: var(--title-font);
+}
+
+.tickets > .titulo-tickets > h1 {
+    font-size: 50px;
+    padding: 30px 100px;
+
+}
+
+.tickets > .titulo-tickets > h3 {
+    font-size: 35px;
+}
