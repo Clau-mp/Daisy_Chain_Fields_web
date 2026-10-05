@@ -45,11 +45,6 @@
 
       
     }
-    
-    for( var i = 0; i < links.length; i++){
-        links[i].addEventListener("click", closeMenu);
-    }
-
         
 })();
 
@@ -71,8 +66,8 @@ function closeModal(){
     openSingUp.classList.remove("open");
 }
 
-openSingUp.addEventListener("click", openModal);
-closeSingUp.addEventListener("click", closeModal);
+if (openSingUp) openSingUp.addEventListener("click", openModal);
+if (closeSingUp) closeSingUp.addEventListener("click", closeModal);
 
 
 showSingUp.addEventListener("click", function(e){
@@ -86,6 +81,40 @@ selectCountry.addEventListener("change", function(){
         phoneNumber.value = prefix
     }
 });
+
+
+// Hero
+
+document.addEventListener("DOMContentLoaded", function(){
+    var photos = document.querySelectorAll(".hero-photos-container .hero-photo");
+    var currentIndex = 0;
+    var intervalTime = 3000;
+
+    if (photos.length > 0){
+        function changePhotos() {
+            photos[currentIndex].classList.remove("hero-photo-activate");
+            currentIndex = (currentIndex + 1) % photos.length;
+            photos[currentIndex].classList.add("hero-photo-activate");
+        }
+
+    setInterval (changePhotos, intervalTime)
+    }
+    
+
+});
+
+// flower cards
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cardSingUpBtn = document.getElementById("card-sing-up-btn");
+    if (cardSingUpBtn){
+        cardSingUpBtn.addEventListener("click", (e) => {
+            e.stopImmediatePropagation();
+            openModal();
+        });
+        
+    }
+})
 
 // DONATE
 
@@ -113,31 +142,9 @@ for(var i = 0; i < donatePin.length; i++){
     });
 
 }
-closeDonateModalBtn.addEventListener("click", closeDonateModal);
-pinModalBackground.addEventListener("click", function(e){
+if (closeDonateModalBtn){closeDonateModalBtn.addEventListener("click", closeDonateModal);}
+if (pinModalBackground){pinModalBackground.addEventListener("click", function(e){
     if (e.target === pinModalBackground){
         closeDonateModal();
     }
-})
-
-
-
-// Hero
-
-document.addEventListener("DOMContentLoaded", function(){
-    var photos = document.querySelectorAll(".hero-photos-container .hero-photo");
-    var currentIndex = 0;
-    var intervalTime = 3000;
-
-    if (photos.length > 0){
-        function changePhotos() {
-            photos[currentIndex].classList.remove("hero-photo-activate");
-            currentIndex = (currentIndex + 1) % photos.length;
-            photos[currentIndex].classList.add("hero-photo-activate");
-        }
-
-    setInterval (changePhotos, intervalTime)
-    }
-    
-
-});
+})}
