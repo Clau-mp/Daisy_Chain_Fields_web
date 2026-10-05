@@ -1,0 +1,228 @@
+@font-face {
+    font-family: The Bold Font;
+    src: url(../media/fonts/THEBOLDFONT-FREEVERSION.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+
+    /* Tipografias */
+    --main-font: "Libre Franklin", sans-serif; 
+    --title-font: "The Bold Font", sans-serif;
+
+    /* Pesos tipografia Libre Franklin */
+    --LF-regular: 400;
+    --LF-bold: 700;
+    --LF-extrabold: 900;
+
+    /* Colores  */
+
+    --pastel-pink: #FDAFCB;
+    --dark-pink: #E06286;
+    --yellow: #FFE778;
+    --green: #89D886;
+    --orange: #F28020;
+    --blue: #73E6FF; 
+    --pastel-white: #FDFBF0;
+    --white: #FFFFFF;
+    --black: #1A1A1A;
+
+    /* Tamaño de fuentes  */
+
+    --medium-text-size:1.3rem;
+    --title-text-size:2rem;
+    --bt-text-size:1.4rem;
+
+    --title-text-size-tablet:1.7rem;
+    --bt-text-size-tablet: 1.2rem;
+
+    --title-text-size-phone:1.5rem;
+    --bt-text-size-phone: 0.9rem;
+    
+    --nav-h: 6rem;
+    --btn-transition: transform 0.3s ease, color 0.3s ease;
+    --text-transition: color 0.2s ease;
+
+}
+
+/* FOOTER */
+
+#footer {
+    background-color: var(--black);
+    padding: 1rem 3rem;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.patrocinadores-footer {
+    /* height: 9,5rem; */
+    margin: 3rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 5rem;
+    flex-wrap: wrap;
+    filter: grayscale(100);
+    grid-template: repeat(2, 1fr);
+}
+
+
+.patrocinadores-footer > a {
+    width: auto;
+    overflow: cover;
+    object-fit: cover;
+}
+
+.footer-linea{
+    height: 2px;
+    background-color: var(--white);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.redes-sociales {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales > a {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 1,7rem;
+    width: 5rem;
+}
+
+.copyright-footer {
+    color: var(--white);
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MAPA  */
+
+.mapa {
+    padding: 12rem 10rem;
+    background-image: url(cesped_textura.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    text-align: center;
+    width: 100%;
+}
+
+.titulo-mapa > .texto-mapa > h1 {
+    /* color: var(--white); */
+    text-align: center;
+    padding: 30px 100px;
+    font-family: var(--title-font);
+    font-size: 40px;
+}
+
+.titulo-mapa > .texto-mapa > h3 {
+    /* color: var(--white); */
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 30px;
+}
+
+.mapa-elementos {
+    position: relative;
+    max-width: 80%;
+}
+
+.mapa-elementos > .mapa-imagen {
+    padding: 1rem;
+    background-color: var(--pastel-white);    
+    border-radius: 1rem;
+
+}
+
+.mapa-elementos > .mapa-imagen > img{
+    border-image-width: 1rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    /* background-size: cover; */
+    /* margin-top: 4rem; */
+}
+
+.mapa-elementos > .chapas-mapa > img {
+    max-width: 40%;
+    align-items: center;
+}
+
+.mapa-elementos > .chapas-mapa > :first-child {
+    max-width: 50%;
+    transform: rotate(5);
+}
+
+.mapa-elementos > .chapas-mapa > :last-child {
+    max-width: 30%;
+}
+
+.mapa-elementos > .texto-postit > p {
+    font-size: var(--bt-text-size);
+    font-family: var(--main-font);
+}
+
+/* SETLIST */
+
+.titulo-setlist {
+    padding: 12rem 10rem;
+    background-image: url(papel_textura.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    align-content: center;
+}
+
+.titulo-setlist > div > h1 {
+    /* color: var(--white); */
+    text-align: center;
+    padding: 30px 100px;
+    font: var(--title-font);
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.titulo-setlist > div > h3 {
+    /* color: var(--white); */
+    text-align: center;
+    font: var(--title-font);
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.titulo-setlist > .setlist-imagen > img {
+    background-size: cover;
+    max-width: 30rem;
+    border-radius: 1rem;
+    border: 1rem solid var(--pastel-white);
+    border-image-width: 1rem;
+    margin-top: 4rem;
+}
+
+/* @media  (max-width: 778px) { */
+
+/* .footer > .patrocinadores-footer {
+    max-width: 80%;
+    margin: 3rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 5rem;
+    flex-wrap: wrap;
+    filter: grayscale(100);
+    grid-template: repeat(2, 1fr);
+}
+} */
