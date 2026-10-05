@@ -120,34 +120,33 @@
     /* color: var(--white); */
     text-align: center;
     padding: 30px 100px;
-    font: var(--title-font);
-    font-weight: 900;
-    font-size: 50px;
+    font-family: var(--title-font);
+    font-size: 40px;
 }
 
 .titulo-mapa > div > h3 {
     /* color: var(--white); */
     text-align: center;
-    font: var(--title-font);
-    font-weight: 900;
-    font-size: 35px;
+    font-family: var(--title-font);
+    font-size: 30px;
 }
 
-.titulo-mapa > .mapa-imagen > img {
-    background-size: cover;
-    max-width: 100%;
+.mapa-imagen > div {
     border-radius: 1rem;
     border: 1rem solid var(--pastel-white);
     border-image-width: 1rem;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+}
+
+.mapa-imagen > div > img {
+    /* padding: 12rem 10rem; */
+    background-size: cover;
+    max-width: 100%;
 }
 
 .chapas-mapa {
     max-width: 40%;
-    /* display: flex; */
-    /* position: relative; */
     align-items: center;
-    /* gap: -30px; */
 }
 
 .chapas-mapa > :first-child {
@@ -159,18 +158,23 @@
     max-width: 30%;
 }
 
+.texto-postit > p {
+    font-size: var(--bt-text-size);
+    font-family: var(--main-font);
+}
+
 /* SETLIST */
 
 .titulo-setlist {
-    padding: 15rem 10rem;
+    padding: 12rem 10rem;
     background-image: url(papel_textura.jpg);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
-    padding:  0px 100px;
+    align-content: center;
 }
 
-.titulo-setlist {
+.titulo-setlist > div > h1 {
     /* color: var(--white); */
     text-align: center;
     padding: 30px 100px;
@@ -179,15 +183,35 @@
     font-size: 50px;
 }
 
-.titulo-setlist > .setlist-imagen {
-    display: flex;    
+.titulo-setlist > div > h3 {
+    /* color: var(--white); */
+    text-align: center;
+    font: var(--title-font);
+    font-weight: 900;
+    font-size: 35px;
 }
 
 .titulo-setlist > .setlist-imagen > img {
     background-size: cover;
-    max-width: 700px;
+    max-width: 30rem;
     border-radius: 1rem;
     border: 1rem solid var(--pastel-white);
     border-image-width: 1rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
+
+/* @media  (max-width: 778px) { */
+
+/* .footer > .patrocinadores-footer {
+    max-width: 80%;
+    margin: 3rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 5rem;
+    flex-wrap: wrap;
+    filter: grayscale(100);
+    grid-template: repeat(2, 1fr);
+}
+} */
