@@ -114,7 +114,47 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         
     }
-})
+});
+// BADGES HOME
+
+(function(){
+    const images = [
+        "media/photos/festival_chapas_decoration/badge-1.webp",
+        "media/photos/festival_chapas_decoration/badge-2.png",
+        "media/photos/festival_chapas_decoration/badge-3.png",
+        "media/photos/festival_chapas_decoration/badge_4.png",
+        "media/photos/festival_chapas_decoration/badge-05.png",
+        "media/photos/festival_chapas_decoration/badge_6.png",
+    ];
+    const track =document.getElementById("badgesTrack");
+    if (!track) return;
+    const html = images
+    .map(src => `<div class="badge"><img src="${src}" alt=""></div>`)
+    .join("");
+
+    const speed = 60;
+    let x = 0;
+    let last = performance.now();
+    let setWidth = 0;
+
+    function tick(now){
+        const dt = (now - last) / 1000;
+        last = now;
+
+        x -= speed * dt;
+        if(x <= -setWidth) x += setWidth;
+        track.style.transform = `translateX(${x}px)`;
+        requestAnimationFrame(tick);
+    }
+    window.addEventListener("load", () => {
+        track.innerHTML = html;
+        setWidth = track.scrollWidth;
+        const repeats = Math.ceil(window.innerWidth * 1.3 / setWidth) + 2;
+        track.innerHTML = html.repeat(repeats);
+        last = performance.now();
+        requestAnimationFrame(tick);
+    });
+})();
 
 // DONATE
 
