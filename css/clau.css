@@ -454,9 +454,60 @@ header{
 }
 
 /* DONATE  */
-
-.donate-pins{
+.donate-intro{
     margin-top: var(--nav-h);
+    padding: 3rem 1rem 1rem;
+    text-align: center;
+}
+.donate-intro-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    max-width: 70rem;
+    margin: 0 auto 2.5rem;
+}
+.donate-intro-container > img{
+    flex: none;
+    width: 6rem;
+    height: auto;
+}
+.donate-title{
+    font-family: var(--title-font);
+    font-size: 5rem;
+    color: var(--black);
+    margin:  0 auto 1rem;
+}
+.donate-subtitle{
+    font-family: var(--main-font);
+    font-weight: var(--LF-bold);
+    font-size: var(--title-text-size);
+    color: var(--black);
+}
+.donate-text{
+   font-family: var(--main-font);
+   font-size: var(--normal-text-size);
+   font-weight: var(--LF-regular);
+    margin: 1rem auto 2rem;
+}
+.donate-btn{
+    display: inline-block;
+    font-family: var(--main-font);
+    font-size: var(--bt-text-size);
+    font-weight: var(--LF-extrabold);
+    background-color: var(--dark-pink);
+    color: var(--white);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    transition: var(--text-transition);
+}
+.donate-btn:hover{
+    background-color: var(--black);
+    color: var(--pastel-pink);
+}
+.donate-pins{
+    margin-top: 0;
     padding: 2rem 1rem;
 }
 
@@ -600,6 +651,18 @@ header{
         margin: 1rem auto;
     }
     /* Donate */
+    .donate-intro{
+        padding: 1rem 2rem 1rem;
+    }
+    .donate-intro-container > img{
+        width: 3rem;
+    }
+    .donate-title{
+        font-size: 2.5rem;
+    }
+    .donate-subtitle{
+        font-size: 1.2rem;
+    }
     .donate-pins{
         padding: 1.5rem 1rem;
     }
@@ -697,7 +760,30 @@ header{
     }
 
     /* donate */
-
+    .donate-intro{
+        padding: 1.5rem 0.8rem 0.5rem;
+    }
+    .donate-intro-container{
+        gap: 0-6rem;
+        margin-bottom: 1.5rem;
+    }
+    .donate-intro-container> img{
+        width: 1.8rem;
+    }
+    .donate-title{
+        font-size: 1.6rem;
+    }
+   .donate-subtitle{
+    font-size: 1rem;
+   }
+   .donate-text{
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+   }
+   .donate-btn{
+    font-size: var(--bt-text-size-phone);
+    padding: 0.5rem 1.2rem;
+   }
     .donate-pins{
         padding: 1rem 0.5rem;
     }
