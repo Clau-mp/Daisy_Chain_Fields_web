@@ -87,6 +87,40 @@ selectCountry.addEventListener("change", function(){
     }
 });
 
+// DONATE
+
+var  donatePin = document.querySelectorAll(".donate-pin");
+var pinModalBackground = document.getElementById("pin-modal-background");
+var closeDonateModalBtn = document.getElementById("close-pin-modal-btn");
+var donatePinModalImg = document.getElementById("pin-modal-img");
+var donatePinContent = document.getElementById("pin-modal-content");
+
+function closeDonateModal(){
+    pinModalBackground.classList.remove("open");
+    document.body.classList.remove("modal-open");
+}
+for(var i = 0; i < donatePin.length; i++){
+    donatePin[i].addEventListener("click", function(){
+        var pinImg = this.querySelector("img");
+        var pinInfo = this.querySelector(".donate-pin-info");
+
+        donatePinModalImg.src = pinImg.src;
+        donatePinModalImg.alt = pinImg.alt;
+        donatePinContent.innerHTML = pinInfo.innerHTML;
+
+        pinModalBackground.classList.add("open");
+        document.body.classList.add("modal-open");
+    });
+
+}
+closeDonateModalBtn.addEventListener("click", closeDonateModal);
+pinModalBackground.addEventListener("click", function(e){
+    if (e.target === pinModalBackground){
+        closeDonateModal();
+    }
+})
+
+
 
 // Hero
 

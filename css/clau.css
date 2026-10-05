@@ -489,7 +489,7 @@ header{
 
 .pin-modal-background{
     position: fixed;
-    top: calc(var(--nav-h) + 1rem);
+    top: var(--nav-h);
     right: 0;
     bottom: 0;
     left: 0;
@@ -515,21 +515,21 @@ header{
     padding: 2rem 1.75rem;
     border-radius: 1rem;
 }
-.close-pin-modal-btm{
+.close-pin-modal-btn{
     position: absolute;
     top: 1rem;
     right:1.2rem ;
     padding: 0;
     background: none;
     border: none;
-    color: var(--black);
+    color: var(--pastel-pink);
     font-size: 2rem;
     cursor: pointer;
 }
 .pin-modal-img{
     display: block;
     width: 100%;
-    max-width: 14rem;
+    max-width: 18rem;
     height: auto;
     margin: 0 auto 1.5rem;
 }
@@ -599,7 +599,22 @@ header{
     .submit-btn{
         margin: 1rem auto;
     }
-
+    /* Donate */
+    .donate-pins{
+        padding: 1.5rem 1rem;
+    }
+    .donate-pins-container{
+        gap: 1.5rem;
+    }
+    .donate-pin{
+        width: calc((100% - 3.3rem) / 3);
+    }
+    .pin-modal{
+        max-width: 25rem;
+    }
+    .pin-modal-content > h3{
+        font-size:  var(--title-text-size-tablet);
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -679,5 +694,48 @@ header{
 
     .hero-badge > img{
         width: 9rem;
+    }
+
+    /* donate */
+
+    .donate-pins{
+        padding: 1rem 0.5rem;
+    }
+    .donate-pins-container{
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    .donate-pin{
+        width: calc((100% - 1.5rem) /2);
+    }
+    .donate-pin:hover{
+        transform: scale(1.05);
+    }
+    .pin-modal-background{
+        padding: 0 0.6rem;
+    }
+    .pin-modal{
+        padding: 3rem 1.2rem 1.5rem;
+        border-radius: 0.8rem;
+    }
+    .close-modal-btn{
+        top: 0.8rem;
+        right: 1rem;
+        font-size: 1.6rem;
+    }
+    .pin-modal-img{
+        max-width: 11rem;
+        margin-bottom: 1rem;
+    }
+    .pin-modal-content > h3{
+        font-size: var(--title-text-size-phone);
+    }
+    .pin-modal-content > p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+
+    }
+    .pin-modal-content > a{
+        font-size: 1rem;
     }
 }
