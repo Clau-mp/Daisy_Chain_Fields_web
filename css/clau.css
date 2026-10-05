@@ -710,6 +710,67 @@ header{
     text-decoration: none;
 
 }
+/* FOOTER  */
+
+/* FOOTER */
+
+#footer {
+    background-color: var(--black);
+    padding: 1rem 3rem;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.patrocinadores-footer {
+    /* height: 9,5rem; */
+    margin: 3rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 5rem;
+    flex-wrap: wrap;
+    filter: grayscale(100%);
+    grid-template: repeat(2, 1fr);
+}
+
+
+.patrocinadores-footer > a {
+    width: auto;
+    overflow: cover;
+    object-fit: cover;
+}
+
+.footer-linea{
+    height: 2px;
+    background-color: var(--white);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.redes-sociales {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales > a {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 1.7rem;
+    width: 5rem;
+}
+
+.copyright-footer {
+    color: var(--white);
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 /* Media queries */
@@ -816,6 +877,33 @@ header{
     }
     .pin-modal-content > h3{
         font-size:  var(--title-text-size-tablet);
+    }
+
+    /* FOOTER */
+    #footer{
+        padding: 1.5rem 1.5rem;
+    }
+    .patrocinadores-footer{
+        gap: 1.5rem 2rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+    }
+    .patrocinadores-footer > img{
+        max-height: 28px;
+        max-width: 90px;
+    }
+    .redes-sociales > a{
+        font-size: 1.5rem;
+    }
+    .copyright-footer{
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    .copyright-footer > p:last-child{
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+        opacity: 0.8;
     }
 }
 
@@ -984,5 +1072,27 @@ header{
     }
     .pin-modal-content > a{
         font-size: 1rem;
+    }
+
+    /* FOOTER */
+
+    #footer{
+        padding: 1rem 0.8rem;
+    }
+    .patrocinadores-footer{
+        gap: 1.2rem;
+    }
+    .patrocinadores-footer > img{
+        max-height: 22px;
+        max-width: 75px;
+    }
+    .redes-sociales{
+        gap: 1.2rem;
+    }
+    .redes-sociales > a{
+        font-size: 1.3rem;
+    }
+    .copyright-footer > p:last-child{
+        font-size: 0.7rem;
     }
 }
