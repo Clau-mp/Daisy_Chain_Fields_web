@@ -145,6 +145,7 @@
     background-color: var(--pastel-white);    
     border-radius: 1rem;
     display: block;
+    margin: 3rem;
 }
 
 .mapa-elementos > .mapa-imagen > img{
@@ -157,37 +158,24 @@
 
 .mapa-elementos > .chapas-mapa {
     position: absolute;
-    left: -20%;
-    bottom: -25%;
+    left: -13%;
+    bottom: -20%;
     z-index: 3;
 }
 
 .mapa-elementos > .chapas-mapa > img {
-    max-width: 20%;
-}
-
-.mapa-elementos > .chapas-mapa > :first-child {
+    width: 60%;
     top: 0;
     left: 0;
-    width: 75%;
     transform: rotate(-8deg);
     z-index: 1;
 }
 
-.mapa-elementos > .chapas-mapa > :last-child {
-    top: 45%;
-    left: 80%;
-    width: 30%;
-    transform: rotate(8deg);
-    z-index: 2;
-}
-
 .mapa-elementos > .yellow-flower {
     position: absolute;
-    max-width: 70%;
-    right: 5%;
-    bottom: 12%;
-    width: 8%;
+    width: 15%;
+    right: 2%;
+    bottom: 2%;
     height: auto;
     z-index: 4;
 }
@@ -200,7 +188,6 @@
     transform: rotate(8deg);
     text-decoration: none;
     z-index: 1;
-
 }
 
 .mapa-elementos > .texto-postit > img {
@@ -304,7 +291,7 @@
     max-width: 60%;
     background-color: var(--pastel-white);
     margin: 2rem auto;
-    padding: 2rem 3rem;
+    padding: 2rem 2.5rem;
     border-radius: 1rem;
     display: flex;
     /* align-content: center; */
@@ -314,28 +301,59 @@
     font-size: 15px;
     padding: 0.5rem 1rem;
     font-family: var(--main-font);
-    /* align-text: left; */
     background-color: var(--yellow);
     border-radius: 0.5rem;
     max-width: fit-content;
+}
+
+.ticket-price > .general-admission > h2 {
+    font-family: var(--main-font);
+    font-size: 25px;
+    margin: 0.5rem 0;
+}
+
+.ticket-price > .general-admission > :last-child {
+    font-family: var(--main-font);
+    font-size: 13px;
 }
 
 .ticket-price > .vip-field-passes > .ticket-description {
     font-size: 15px;
     padding: 0.5rem 1rem;
     font-family: var(--main-font);
-    /* align-text: left; */
     background-color: var(--green);
     border-radius: 0.5rem;
     max-width: fit-content;
+}
+
+.ticket-price > .vip-field-passes > h2 {
+    font-family: var(--main-font);
+    font-size: 25px;
+    margin: 0.5rem 0;
+}
+
+.ticket-price > .vip-field-passes > :last-child {
+    font-family: var(--main-font);
+    font-size: 13px;
 }
 
 .ticket-price > .early-bird > .ticket-description {
     font-size: 15px;
     padding: 0.5rem 1rem;
     font-family: var(--main-font);
-    /* align-text: left; */
     background-color: var(--pastel-pink);
     border-radius: 0.5rem;
     max-width: fit-content;
+}
+
+.ticket-price > .early-bird > h2 {
+    font-family: var(--main-font);
+    font-weight: bolder;
+    font-size: 25px;
+    margin: 0.5rem 0;
+}
+
+.ticket-price > .early-bird > :last-child {
+    font-family: var(--main-font);
+    font-size: 13px;
 }
