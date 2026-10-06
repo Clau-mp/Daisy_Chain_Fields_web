@@ -596,6 +596,125 @@ header{
     height: 100%;
     object-fit: contain;
 }
+/* Mission */
+
+.mission{
+    background-color: var(--pastel-pink);
+    padding: 4rem 1rem 6rem;
+    display: flex;
+    justify-content: center;
+}
+.mission-card{
+    background-image: url(../media/photos/postit-amarillo.png);
+    background-size: cover;
+    filter: drop-shadow(var(--shadow));
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+    padding: 3rem 3.5rem 10rem;
+}
+.mission-logo{
+    display: block;
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+    margin:  0 auto 2rem;
+}
+.mission-text{
+    max-width: 48rem;
+    margin: 0 auto;
+    font-family: var(--main-font);
+    font-weight: var(--LF-extrabold);
+    font-size: var(--normal-text-size);
+    line-height: 1.35;
+    color: var(--dark-pink);
+}
+.mission-flower{
+    position: absolute;
+    width: 4.5rem;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+    animation: spinFlower 3s ease-in-out infinite alternate;
+}
+.mission-flower-left{
+    top: 3rem;
+    left: -2rem;
+}
+.mission-flower-right{
+    top: 22rem;
+    right: -2rem;
+    left: auto;
+    animation-delay: -1.5s;
+    animation-direction: alternate-reverse;
+}
+@keyframes spinFlower {
+    0%{ transform: rotate(-25deg);}
+    100%{ transform: rotate(25deg);}
+}
+
+/* TICKETS CTA */
+.tickets-cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    background-image: url(../media/photos/flower-bakground-green.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tickets-cta-box{
+    width: 100%;
+    max-width: 60rem;
+    padding: 2rem 2rem 2.5rem;
+    background-color: rgba(255, 255, 225, 0.67);
+    border-radius: 1rem;
+    text-align: center;
+}
+.tickets-cta-title-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.tickets-cta-flower{
+    flex: none;
+    width: 6rem;
+    height: auto;
+}
+.tickets-cta-title{
+    font-family: var(--title-font);
+    font-size: 4rem;
+    line-height: 1.05;
+    color: var(--dark-pink);
+    text-transform: uppercase;
+}
+.tickets-cta-text{
+    margin: 0.8rem 0 1.5rem;
+    font-family: var(--main-font);
+    font-weight: var(--LF-regular);
+    font-size: 1.8rem;
+    color: var(--dark-pink);
+}
+.tickets-cta-btn{
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-family: var(--main-font);
+    font-weight: var(--LF-extrabold);
+    font-size: var(--bt-text-size);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: var(--btn-transition);
+}
+.tickets-cta-btn:hover{
+    background-color: var(--black);
+    color: var(--orange);
+}
 /* DONATE  */
 .donate-intro{
     margin-top: var(--nav-h);
@@ -902,6 +1021,54 @@ header{
     .badges-track{
         gap: 1.5rem;
     }
+
+    /* Mission */
+    .mission{
+        padding: 3rem 1ren 4rem;
+    }
+    .mission-card{
+        padding: 2rem 2rem 7rem;
+    }
+    .mission-logo{
+        max-width: 24rem;
+        margin-bottom: 1.5rem;
+    }
+    .mission-text{
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    .mission-flower{
+        width: 3.2rem;
+    }
+    .mission-flower-left{
+        top: 2rem;
+        left: -1rem;
+    }
+    .mission-flower{
+       top: 16rem;
+       right: -1rem;
+    }
+    /* Tickets CTA Home */
+
+    .tickets-cta{
+        padding: 3rem 1rem;
+    }
+    .tickets-cta-box{
+        padding: 1.5rem 1.2rem 2rem;
+    }
+    .tickets-cta-title-row{
+        gap: 1rem;
+    }
+    .tickets-cta-flower{
+        width: 2.4rem;
+    }
+    .tickets-cta-title{
+        font-size: 2.6rem;
+    }
+    .tickets-cta-text{
+        font-size: var(--bt-text-size-tablet);
+        margin: 0.6rem 0 1.2rem;
+    }
     /* Donate */
     .donate-intro{
         padding: 1rem 2rem 1rem;
@@ -1074,6 +1241,54 @@ header{
     }
     .badges-track{
         gap: 1.2rem;
+    }
+
+    /* Mission */
+    .mission{
+        padding: 2rem 0.8rem 3rem;
+    }
+    .mission-card{
+        padding: 1.5rem 1.2rem 5rem;
+    }
+    .mission-logo{
+        max-width: 17rem;
+        margin-bottom: 1rem;
+    }
+    .mission-text{
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+    .mission-flower{
+        width: 2.2rem;
+    }
+    .mission-flower-left{
+        top: 1rem;
+        left: -0.4rem;
+    }
+    .mission-flower-right{
+        top: 11rem;
+        right: -0.4rem;
+    }
+    /* Tickets CTA Home */
+    .tickets-cta{
+        padding: 2rem 0.8rem;
+    }
+    .tickets-cta-box{
+        padding: 1.2rem 0.8rem 1.5rem;
+    }
+    .tickets-cta-flower{
+        width: 1.5rem;
+    }
+    .tickets-cta-title{
+        font-size: 1.9rem;
+    }
+    .tickets-cta-text{
+        font-size: 1rem;
+        margin: 0.5rem 0 1rem;
+    }
+    .tickets-cta-btn{
+        font-size: var(--bt-text-size-phone);
+        padding: 1rem 1.5rem;
     }
     /* donate */
     .donate-intro{
