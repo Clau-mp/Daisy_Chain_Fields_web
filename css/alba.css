@@ -109,25 +109,26 @@
 /* MAPA  */
 
 .mapa {
+    box-sizing: border-box;
+    width: 100%;
     padding: 12rem 10rem;
     background-image: url(cesped_textura.webp);
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
     text-align: center;
-    width: 100%;
 }
 
 .titulo-mapa > .texto-mapa > h1 {
     /* color: var(--white); */
     text-align: center;
-    padding: 30px 100px;
+    padding: 2rem 6rem;
     font-family: var(--title-font);
     font-size: 40px;
 }
 
 .titulo-mapa > .texto-mapa > h3 {
-    /* color: var(--white); */
+    margin: 0 0 3rem;
     text-align: center;
     font-family: var(--title-font);
     font-size: 30px;
@@ -136,42 +137,89 @@
 .mapa-elementos {
     position: relative;
     max-width: 80%;
+    margin: 0 auto;
 }
 
 .mapa-elementos > .mapa-imagen {
     padding: 1rem;
     background-color: var(--pastel-white);    
     border-radius: 1rem;
-
+    display: block;
 }
 
 .mapa-elementos > .mapa-imagen > img{
     border-image-width: 1rem;
     width: 100%;
     height: auto;
-    display: block;
     border-radius: 1rem;
-    /* background-size: cover; */
-    /* margin-top: 4rem; */
+    z-index: 2;
+}
+
+.mapa-elementos > .chapas-mapa {
+    position: absolute;
+    left: -20%;
+    bottom: -25%;
+    z-index: 3;
 }
 
 .mapa-elementos > .chapas-mapa > img {
-    max-width: 40%;
-    align-items: center;
+    max-width: 20%;
 }
 
 .mapa-elementos > .chapas-mapa > :first-child {
-    max-width: 50%;
-    transform: rotate(5);
+    top: 0;
+    left: 0;
+    width: 75%;
+    transform: rotate(-8deg);
+    z-index: 1;
 }
 
 .mapa-elementos > .chapas-mapa > :last-child {
-    max-width: 30%;
+    top: 45%;
+    left: 80%;
+    width: 30%;
+    transform: rotate(8deg);
+    z-index: 2;
+}
+
+.mapa-elementos > .yellow-flower {
+    position: absolute;
+    max-width: 70%;
+    right: 5%;
+    bottom: 12%;
+    width: 8%;
+    height: auto;
+    z-index: 4;
+}
+
+.mapa-elementos > .texto-postit {
+    position: absolute;
+    right: -3%;
+    bottom: -26%;
+    width: 25%;
+    transform: rotate(8deg);
+    text-decoration: none;
+    z-index: 1;
+
+}
+
+.mapa-elementos > .texto-postit > img {
+    display: block;
+    width: 90%;
+    height: auto;
 }
 
 .mapa-elementos > .texto-postit > p {
     font-size: var(--bt-text-size);
     font-family: var(--main-font);
+    position: absolute;
+    margin: 0;
+    padding: 20% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
 }
 
 /* SETLIST */
@@ -235,7 +283,6 @@
     background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
-    text-align: center;
     width: 100%;
 }
 .tickets > .titulo-tickets {
@@ -245,9 +292,50 @@
 .tickets > .titulo-tickets > h1 {
     font-size: 50px;
     padding: 30px 100px;
-
+    text-align: center;
 }
 
 .tickets > .titulo-tickets > h3 {
     font-size: 35px;
+    text-align: center;
+}
+
+.ticket-price {
+    max-width: 60%;
+    background-color: var(--pastel-white);
+    margin: 2rem auto;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    display: flex;
+    /* align-content: center; */
+}
+
+.ticket-price > .general-admission > .ticket-description {
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+    font-family: var(--main-font);
+    /* align-text: left; */
+    background-color: var(--yellow);
+    border-radius: 0.5rem;
+    max-width: fit-content;
+}
+
+.ticket-price > .vip-field-passes > .ticket-description {
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+    font-family: var(--main-font);
+    /* align-text: left; */
+    background-color: var(--green);
+    border-radius: 0.5rem;
+    max-width: fit-content;
+}
+
+.ticket-price > .early-bird > .ticket-description {
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+    font-family: var(--main-font);
+    /* align-text: left; */
+    background-color: var(--pastel-pink);
+    border-radius: 0.5rem;
+    max-width: fit-content;
 }
