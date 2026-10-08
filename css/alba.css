@@ -294,9 +294,9 @@
     gap: 2rem;
 }
 
-.tickets-list > .ticket-price {
+.ticket-price {
     max-width: none;
-    margin: 0;
+    margin: 0 0 2rem;
     padding: 1.5rem 2.5rem;
     background-color: var(--pastel-white);
     border-radius: 1rem;
@@ -354,73 +354,12 @@
     margin: 0.5rem 0;
 }
 
-/* vip field pass box */
-/* 
-.ticket-price > .vip-field-passes > .ticket-intro >.ticket-description {
-    font-size: 15px;
-    padding: 0.5rem 1rem;
-    font-family: var(--main-font);
-    background-color: var(--green);
-    border-radius: 0.5rem;
-    max-width: fit-content;
-}
-
-.ticket-price > .vip-field-passes > h2 {
-    font-family: var(--main-font);
-    font-size: 25px;
-}
-
-.ticket-price > .vip-field-passes > .ticket-intro > img {
-    width: 5%;
-    height: auto;
-    display: flex;
-}
-
-.ticket-price > .vip-field-passes > :last-child {
-    font-family: var(--main-font);
-    font-size: 13px;
-    margin: 0.5rem 0;
-} */
-
-/* early bird box */
-/* 
-.ticket-price > .early-bird > .ticket-description {
-    font-size: 15px;
-    padding: 0.5rem 1rem;
-    font-family: var(--main-font);
-    background-color: var(--pastel-pink);
-    border-radius: 0.5rem;
-    max-width: fit-content;
-}
-
-.ticket-price > .early-bird > h2 {
-    font-family: var(--main-font);
-    font-weight: bolder;
-    font-size: 25px;
-}
-
-.ticket-price > .early-bird > img {
-    width: 6%;
-    height: auto;
-    position: relative;
-    left: 35%;
-    bottom: 22%;
-    display: flex;
-}
-
-.ticket-price > .early-bird > :last-child {
-    font-family: var(--main-font);
-    font-size: 13px;
-    margin: 0.5rem 0;
-} */
-
 /* BOTON DE PRECIO */
 
 .btn-price {
     /* width: 5rem; */
     height: auto;
     /* padding: 3rem 5rem; */
-    border-color: var(--orange);
     border-radius: 1rem;
     padding: 0 0 0 1rem;
     display: flex;
@@ -432,7 +371,7 @@
     display: flex;
     align-items: center;
     border-radius: 1rem;
-    border: 5px solid var(--orange);
+    /* border: 5px solid var(--orange); */
     background-color: var(--white);
     overflow: hidden;
 }
@@ -443,6 +382,7 @@
     font-family: var(--main-font);
     font-size: 1.4rem;
     line-height: 1;
+    background-color: var(--yellow);
     /* background: var(--surface); */
     border: none;
     cursor: pointer;
@@ -456,7 +396,7 @@
     line-height: 2.8rem;
 }
 
-/* ---------- 9. RESUMEN ---------- */
+/* resumen de las entradas */
 .resumen {
     grid-column: 2;
     position: sticky;
@@ -468,6 +408,10 @@
     border: none;
     border-radius: 1rem;
     /* box-shadow: 10px 10px 0 var(--black); */
+}
+
+.resumen > h2 {
+    font-family: var(--title-font);
 }
 
 .resumen__lista {
@@ -483,16 +427,20 @@
     justify-content: space-between;
     gap: 1rem;
     font-size: 0.95rem;
+    color: var(--black)
+
 }
 
 .resumen__vacio {
     color: var(--white);
     font-style: italic;
     font-family: var(--main-font);
+    color: var(--black)
 
 }
 
 .resumen__cuentas {
+    font-family: var(--main-font);
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -507,6 +455,10 @@
     gap: 1rem;
 }
 
+.resumen__cuentas > .resumen__fila--total {
+    border-radius: 0.5rem;
+}
+
 .resumen__fila dt small {
     display: block;
     font-size: 0.8rem;
@@ -516,6 +468,12 @@
 .resumen__fila dd {
     font-weight: 700;
     white-space: nowrap;
+}
+
+.resumen__fila dt {
+    font-weight: 700;
+    white-space: nowrap;
+    /* font-family: var(--title-font); */
 }
 
 .resumen__fila--total {
@@ -528,9 +486,20 @@
     border-radius: var(--radius);
 }
 
+.resumen__cuentas > .boton {
+    color: var(--black);
+    background-color: var(--orange);
+    font-family: var(--main-font);
+    font-size: var(--bt-text-size);
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.8rem;
+}
+
 .resumen__fila--total dd {
     font-weight: 400;
 }
+
+
 
 @media  (max-width: 778px) {
     .tickets {
