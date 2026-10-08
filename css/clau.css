@@ -95,11 +95,11 @@ body >.intro-active{
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
     animation: introFade 5s ease-in-out forwards;
 }
 @keyframes introFade {
-    0% { opacity: 0;}
+    0% { opacity: 1;}
     20% { opacity: 1;}
     78% { opacity: 1;}
     100% { opacity: 0;}
