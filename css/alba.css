@@ -228,7 +228,6 @@
 }
 
 .titulo-setlist > div > h1 {
-    /* color: var(--white); */
     text-align: center;
     padding: 30px 100px;
     font: var(--title-font);
@@ -237,7 +236,6 @@
 }
 
 .titulo-setlist > div > h3 {
-    /* color: var(--white); */
     text-align: center;
     font: var(--title-font);
     font-weight: 900;
@@ -314,7 +312,6 @@
     border-radius: 0.5rem;
     max-width: fit-content;
     display: inline-block;
-    /* flex-direction: row; */
 }
 
 .general-admission > .ticket-intro > .ticket-description {
@@ -328,6 +325,8 @@
 .early-bird > .ticket-intro > .ticket-description {
     background-color: var(--pastel-pink);
 }
+
+/* general admission */
 
 .general-admission > h2 {
     font-family: var(--title-font);
@@ -348,18 +347,111 @@
     display: flex;
 }
 
-.general-admission > :last-child {
+.general-admission > .tickets-subtitle {
     font-family: var(--main-font);
     font-size: 13px;
     margin: 0.5rem 0;
 }
 
+.general-admission > :last-child {
+    font-family: var(--main-font);
+    width: fit-content;
+    font-size: 25px;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 3px solid var(--yellow);
+    border-radius: 1rem;
+}
+
+/* vip field pass */
+
+.vip-field-passes > h2 {
+    font-family: var(--title-font);
+    font-size: 28px;
+}
+
+.vip-field-passes > .ticket-intro {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.vip-field-passes > .ticket-intro > img {
+    width: 7%;
+    height: 7%;
+    left: 37%;
+    bottom: 23%;
+    display: flex;
+}
+
+.vip-field-passes > .tickets-subtitle {
+    font-family: var(--main-font);
+    font-size: 13px;
+    margin: 0.5rem 0;
+}
+
+.vip-field-passes > :last-child {
+    font-family: var(--main-font);
+    width: fit-content;
+    font-size: 25px;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 3px solid var(--green);
+    border-radius: 1rem;
+}
+
+/* early bird */
+
+.early-bird > h2 {
+    font-family: var(--title-font);
+    font-size: 28px;
+}
+
+.early-bird > .ticket-intro {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.early-bird > .ticket-intro > img {
+    width: 7%;
+    height: 7%;
+    left: 37%;
+    bottom: 23%;
+    display: flex;
+}
+
+.early-bird > .tickets-subtitle {
+    font-family: var(--main-font);
+    font-size: 13px;
+    margin: 0.5rem 0;
+}
+
+.early-bird > :last-child {
+    font-family: var(--main-font);
+    width: fit-content;
+    font-size: 25px;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 3px solid var(--pastel-pink);
+    border-radius: 1rem;
+}
+
 /* BOTON DE PRECIO */
 
+
+/* .entrada__controles {
+    display: flex;
+    align-items: center;
+    font-family: var(--main-font);
+    font-size: 20px;
+    border: 3px solid var(--orange);
+    border-radius: 0.5rem;
+    overflow: hidden;
+} */
+
 .btn-price {
-    /* width: 5rem; */
     height: auto;
-    /* padding: 3rem 5rem; */
     border-radius: 1rem;
     padding: 0 0 0 1rem;
     display: flex;
@@ -371,7 +463,6 @@
     display: flex;
     align-items: center;
     border-radius: 1rem;
-    /* border: 5px solid var(--orange); */
     background-color: var(--white);
     overflow: hidden;
 }
@@ -382,18 +473,27 @@
     font-family: var(--main-font);
     font-size: 1.4rem;
     line-height: 1;
-    background-color: var(--yellow);
-    /* background: var(--surface); */
+    background-color: var(--orange);
     border: none;
     cursor: pointer;
-    /* transition: background-color var(--speed) ease; */
 }
+
 .contador__cantidad {
     min-width: 3rem;
     text-align: center;
     font-family: var(--main-font);
     font-size: 1.3rem;
     line-height: 2.8rem;
+}
+
+/* color boton contador */
+
+.general-admission > .contador__boton {
+    background-color: var(--yellow);
+}
+
+.early-bird > .contador__boton {
+    background-color: var(--green);
 }
 
 /* resumen de las entradas */
@@ -407,7 +507,6 @@
     padding: 1.5rem;
     border: none;
     border-radius: 1rem;
-    /* box-shadow: 10px 10px 0 var(--black); */
 }
 
 .resumen > h2 {
@@ -473,7 +572,6 @@
 .resumen__fila dt {
     font-weight: 700;
     white-space: nowrap;
-    /* font-family: var(--title-font); */
 }
 
 .resumen__fila--total {
