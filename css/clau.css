@@ -82,6 +82,11 @@ body.menu-open{
     background-size: auto;
     background-blend-mode: multiply;
 }
+/* INTRO */
+
+body >.intro-active{
+    overflow: hidden;
+}
 
 /* Heather */
 
