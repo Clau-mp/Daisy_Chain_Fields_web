@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="media/icons/favicon.ico">
-    <title>Daisy Chain Fields-Tickets</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/clau.css">
     <link rel="stylesheet" href="css/alba.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,37 +13,153 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-   <header>
+    <header>
         <div  id="iconMenu" class="icons-menu">
             <i class="fa-solid fa-bars icon-ham"></i>
             <span class="material-symbols-outlined icon-flower" >filter_vintage</span>
         </div>
         <div class="main-logo">
-           <a href="index.html"><img src="media/photos/Daisy-Chain-White-logo.svg" alt="Daisy Fields Logo"></a> 
+            <img src="media/photos/Daisy-Chain-White-logo.svg" alt="Daisy Fields Logo">
         </div>
-        <a href="tickets.html" class="tickets-heather-btn">TICKETS</a>
+        <a href="#" class="tickets-heather-btn">TICKETS</a>
 
         <nav id="drawerMenu" class="drawer-menu">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="tickets.html">TICKETS</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="tickets.html"  target="_blank">TICKETS</a></li>
                 <li><a href="https://www.daisychainfields.com" target="_blank" rel="noopener noreferrer">BUY MERCH</a></li>
-                <li><a href="donate.html">DONATE</a></li>
-                <li><a href="setlist.html">LINEUP</a></li>
-                <li><a href="mapa.html">MAP</a></li>
+                <li><a href="#">DONATE</a></li>
+                <li><a href="setlist.html" target="_blank">LINEUP</a></li>
+                <li><a href="mapa.html" target="_blank">MAP</a></li>
             </ul>
         </nav>
     </header>
+
     <script src="js/clau.js"></script>
+    <script src="js/alba.js"></script>
 
     <section class="tickets">
         <div class="titulo-tickets">
-            <h1 class="tickets-maintitle">THE MAP FOR 2027 IS COMING SOON!</h1>
-            <h3 class="tickets-subtitle">Explore the 2026 festival map below!</h3>
+            <h1 class="tickets-maintitle">SELECT YOUR TICKETS BELOW!</h1>
+            <h3 class="tickets-subtitle">All available passes.</h3>
         </div>
+        <section class="tickets-list">
+        <div class="ticket-price">
+            <div class="general-admission">
+                <div class="ticket-intro">
+                    <p class="ticket-description">MOST POPULAR</p>
+                    <img src="media/photos/yellow-flower copia.webp" alt="">
+                </div>
+                <h2>General entry.</h2>
+                <p class="tickets-subtitle">Full single-day entry. Access to all 3 stages, non-profit village & vendors.</p>
+                <p class="entrada__precio">25,00 €</p>
+            </div>
+            <div class="btn-price">
+                
+                <div class="entrada__controles">
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--menos"
+                        aria-label="Quitar una entrada de día">
+                        −
+                    </button>
+                    <span class="contador__cantidad" aria-live="polite">0</span>
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--mas"
+                        aria-label="Añadir una entrada de día">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ticket-price">
+            <div class="vip-field-passes">
+                <div class="ticket-intro">
+                    <p class="ticket-description">VIP ACCESS</p><img src="media/photos/green-flower 2.webp" alt="">
+                </div>
+                <h2>Vip Field Entry.</h2>
+                <p class="tickets-subtitle">Express entry, front-stage viewing pit, shaded AC lounge & collectible pin set</p>
+                <p class="entrada__precio">85,00 €</p>
+            </div>
+            <div class="btn-price">
+                <div class="entrada__controles">
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--menos"
+                        aria-label="Quitar una entrada de día">
+                        −
+                    </button>
+                    <span class="contador__cantidad" aria-live="polite">0</span>
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--mas"
+                        aria-label="Añadir una entrada de día">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ticket-price">
+            <div class="early-bird">
+                <div class="ticket-intro">
+                    <p class="ticket-description">BEST VALUE</p>
+                    <img src="media/photos/pink-flower.webp" alt="">
+                </div>
+                <h2> Early Bird entry.</h2>
+                <p class="tickets-subtitle">Limited discounted tier single-day festival pass.</p>
+                <p class="entrada__precio">150,00 €</p>
+            </div>
+            <div class="btn-price">
+                <div class="entrada__controles">
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--menos"
+                        aria-label="Quitar una entrada de día">
+                        −
+                    </button>
+                    <span class="contador__cantidad" aria-live="polite">0</span>
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--mas"
+                        aria-label="Añadir una entrada de día">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        <aside class="resumen" aria-labelledby="resumen-titulo">
+            <h2 class="resumen__titulo" id="resumen-titulo">Resumen</h2>
+            <ul class="resumen__lista" id="resumen-lista">
+                <li class="resumen__vacio">Todavía no has elegido ninguna entrada.</li>
+            </ul>
+                 <dl class="resumen__cuentas">
+                    <div class="resumen__fila">
+                        <dt>Entradas</dt>
+                        <dd id="total-entradas">0</dd>
+                    </div>
+                    <div class="resumen__fila">
+                            <dt>Subtotal</dt>
+                            <dd id="subtotal">0,00 €</dd>
+                    </div>
+                    <div class="resumen__fila">
+                            <dt>Gastos de gestión <small>(1,50 € por entrada)</small></dt>
+                            <dd id="gastos">0,00 €</dd>
+                    </div>
+                    <div class="resumen__fila resumen__fila--total">
+                            <dt>Total</dt>
+                            <dd id="total">0,00 €</dd>
+                        </div>
+                    <button type="submit" class="boton boton--rosa" id="boton-comprar" disabled>
+                        Comprar entradas
+                    </button>
+                </dl>
+                    <p class="mensaje" id="mensaje" role="status" aria-live="polite"></p>
+        </aside>
     </section>
     
-
     <footer id="footer">
         <div class="patrocinadores-footer">
                 <a href="https://interscope.com/?srsltid=AU7gw4V2d7kxPY4tmxAMtNEm2zG4rkqFueSr6rn5bhEjz1MniqEDA9-E" target="_blank"><img src="media/photos/logo_patro/1-Interscope_White-01.webp" alt=""></a>
