@@ -87,7 +87,70 @@ body.menu-open{
 body >.intro-active{
     overflow: hidden;
 }
+.intro{
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background-color: var(--pastel-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: introFade 7s ease-in-out forwards;
+}
+@keyframes introFade {
+    0% { opacity: 0;}
+    20% { opacity: 1;}
+    78% { opacity: 1;}
+    100% { opacity: 0;}
+}
+.intro-flower{
+    position: absolute;
+    width:10rem ;
+    height: auto;
+    animation: introSpin 3.2s cubic-bezier(0.15, 0.7, 0.25, 1) 0.3s both;
+}
+.intro-flower-top{
+    top: 12%;
+    left: 8%
+}
+.intro-flower-bottom{
+    bottom: 12%;
+    right: 8%;
+    animation-name: introSpinReverse;
+}
+@keyframes introSpin {
+    from { transform:  rotate(0deg);}
+    to {transform:  rotate(720deg);}
+} 
+@keyframes introSpinReverse {
+    from { transform: rotate(0deg);}
+    to {transform: rotate(-720deg);}
+}
+.intro-logo{
+    width: 95%;
+    max-width: 40rem;
+    height: auto;
+    animation: introLogo 1.6s ease-out 0.4s both;
+ }
+ @keyframes introLogo {
+    from { opacity: 0; transform: scale(0.92);}
+    fo { opacity: 1; transform: scale(1);}
+ }
 
+ .intro-signature{
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    width: 3.5rem;
+    height: auto;
+    transform: translateX(-50%);
+    animation: introSignature 1.2s ease-out 2s both;
+ }
+ @keyframes introSignature {
+    from {opacity: 0;}
+    to {opacity: 1;}
+ }
 /* Heather */
 
 header{
