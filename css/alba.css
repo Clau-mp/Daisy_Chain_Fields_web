@@ -43,6 +43,13 @@
     --nav-h: 6rem;
     --btn-transition: transform 0.3s ease, color 0.3s ease;
     --text-transition: color 0.2s ease;
+     
+    /* Transiciones y medidas */
+    --nav-h: 6rem;
+    --btn-transition: transform 0.3s ease, color 0.3s ease;
+    --text-transition: color 0.5s ease;
+    --shadow:0 0.20rem 0.62rem rgb(0,0,0,0.3);
+    --rotate-badge-animation:rotateBadge 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 
 }
 
@@ -246,23 +253,9 @@
     margin-top: 4rem;
 }
 
-/* @media  (max-width: 778px) { */
-
-/* .footer > .patrocinadores-footer {
-    max-width: 80%;
-    margin: 3rem;
-    padding: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem 5rem;
-    flex-wrap: wrap;
-    filter: grayscale(100);
-    grid-template: repeat(2, 1fr);
-}
-} */
-
 /* TICKETS */
+
+/* imagen de fondo */
 
 .tickets {
     padding: 12rem 10rem;
@@ -271,62 +264,99 @@
     background-position: center;
     background-repeat:no-repeat;
     width: 100%;
-}
-.tickets > .titulo-tickets {
-    font-family: var(--title-font);
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 340px;
+    column-gap: 2rem;
 }
 
-.tickets > .titulo-tickets > h1 {
+.titulo-tickets {
+    grid-column: 1 / -1;
+    font-family: var(--title-font);
+    margin-bottom: 4rem;
+}
+
+.titulo-tickets > h1 {
     font-size: 50px;
     padding: 30px 100px;
     text-align: center;
 }
 
-.tickets > .titulo-tickets > h3 {
+.titulo-tickets > h3 {
     font-size: 35px;
     text-align: center;
 }
 
-.ticket-price {
-    max-width: 60%;
+.ticket-list {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tickets-list > .ticket-price {
+    max-width: none;
+    margin: 0;
+    padding: 1.5rem 2.5rem;
     background-color: var(--pastel-white);
-    margin: 2rem auto;
-    padding: 2rem 2.5rem;
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
-    /* align-content: center; */
+    align-items: center;
 }
 
-.ticket-price > .general-admission > .ticket-description {
+/* general admission box */
+
+.ticket-description {
     font-size: 15px;
     padding: 0.5rem 1rem;
     font-family: var(--main-font);
-    background-color: var(--yellow);
     border-radius: 0.5rem;
     max-width: fit-content;
+    display: inline-block;
+    /* flex-direction: row; */
 }
 
-.ticket-price > .general-admission > h2 {
-    font-family: var(--main-font);
-    font-size: 25px;
+.general-admission > .ticket-intro > .ticket-description {
+    background-color: var(--yellow);
 }
 
-.ticket-price > .general-admission > img {
-    width: 5%;
-    height: auto;
-    position: relative;
-    left: 38%;
+.vip-field-passes > .ticket-intro > .ticket-description {
+    background-color: var(--green);
+}
+
+.early-bird > .ticket-intro > .ticket-description {
+    background-color: var(--pastel-pink);
+}
+
+.general-admission > h2 {
+    font-family: var(--title-font);
+    font-size: 28px;
+}
+
+.general-admission > .ticket-intro {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.general-admission > .ticket-intro > img {
+    width: 7%;
+    height: 7%;
+    left: 37%;
     bottom: 23%;
+    display: flex;
 }
 
-.ticket-price > .general-admission > :last-child {
+.general-admission > :last-child {
     font-family: var(--main-font);
     font-size: 13px;
     margin: 0.5rem 0;
 }
 
-.ticket-price > .vip-field-passes > .ticket-description {
+/* vip field pass box */
+/* 
+.ticket-price > .vip-field-passes > .ticket-intro >.ticket-description {
     font-size: 15px;
     padding: 0.5rem 1rem;
     font-family: var(--main-font);
@@ -340,21 +370,20 @@
     font-size: 25px;
 }
 
-.ticket-price > .vip-field-passes > img {
+.ticket-price > .vip-field-passes > .ticket-intro > img {
     width: 5%;
     height: auto;
-    position: relative;
-    left: 29%;
-    bottom: 19%;
+    display: flex;
 }
 
 .ticket-price > .vip-field-passes > :last-child {
     font-family: var(--main-font);
     font-size: 13px;
     margin: 0.5rem 0;
+} */
 
-}
-
+/* early bird box */
+/* 
 .ticket-price > .early-bird > .ticket-description {
     font-size: 15px;
     padding: 0.5rem 1rem;
@@ -376,18 +405,165 @@
     position: relative;
     left: 35%;
     bottom: 22%;
+    display: flex;
 }
 
 .ticket-price > .early-bird > :last-child {
     font-family: var(--main-font);
     font-size: 13px;
     margin: 0.5rem 0;
-}
+} */
 
-.ticket-price > .btn-price {
-    width: 5rem;
+/* BOTON DE PRECIO */
+
+.btn-price {
+    /* width: 5rem; */
     height: auto;
-    padding: 3rem 5rem;
+    /* padding: 3rem 5rem; */
     border-color: var(--orange);
     border-radius: 1rem;
+    padding: 0 0 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.entrada__controles {
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    border: 5px solid var(--orange);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.contador__boton {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-family: var(--main-font);
+    font-size: 1.4rem;
+    line-height: 1;
+    /* background: var(--surface); */
+    border: none;
+    cursor: pointer;
+    /* transition: background-color var(--speed) ease; */
+}
+.contador__cantidad {
+    min-width: 3rem;
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 1.3rem;
+    line-height: 2.8rem;
+}
+
+/* ---------- 9. RESUMEN ---------- */
+.resumen {
+    grid-column: 2;
+    position: sticky;
+    top: 1.5rem;
+    background: var(--pastel-white);
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    /* box-shadow: 10px 10px 0 var(--black); */
+}
+
+.resumen__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 3rem;
+}
+
+.resumen__lista li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.95rem;
+}
+
+.resumen__vacio {
+    color: var(--white);
+    font-style: italic;
+    font-family: var(--main-font);
+
+}
+
+.resumen__cuentas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 1rem;
+    border-top: 6px;
+}
+
+.resumen__fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.resumen__fila dt small {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--white);
+}
+
+.resumen__fila dd {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.resumen__fila--total {
+    margin-top: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    font-family: var(--main-font);
+    font-size: 1.4rem;
+    background: var(--yellow);
+    border: 6px;
+    border-radius: var(--radius);
+}
+
+.resumen__fila--total dd {
+    font-weight: 400;
+}
+
+@media  (max-width: 778px) {
+    .tickets {
+        grid-template-columns: 1fr;
+        padding: 3rem 1,5rem;
+    }
+    .resumen {
+        grid-column: 1;
+        position: static;
+    }
+}
+
+@media  (max-width: 480) {
+    .tickets {
+        grid-template-columns: 1fr;
+        padding: 3rem 1,5rem;
+    }
+    .resumen {
+        grid-column: 1;
+        position: static;
+    }
+}
+
+/* .footer > .patrocinadores-footer {
+    max-width: 80%;
+    margin: 3rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 5rem;
+    flex-wrap: wrap;
+    filter: grayscale(100);
+    grid-template: repeat(2, 1fr);
+}
+} */

@@ -41,39 +41,123 @@
             <h1 class="tickets-maintitle">SELECT YOUR TICKETS BELOW!</h1>
             <h3 class="tickets-subtitle">All available passes.</h3>
         </div>
-        <div class="ticket-price">
+        <section class="tickets-list">
+            <div class="ticket-price">
             <div class="general-admission">
-                <p class="ticket-description">MOST POPULAR</p>
-                <img src="media/photos/yellow-flower copia.webp" alt="">
+                <div class="ticket-intro">
+                    <p class="ticket-description">MOST POPULAR</p>
+                    <img src="media/photos/yellow-flower copia.webp" alt="">
+                </div>
                 <h2>General entry.</h2>
                 <p>Full single-day entry. Access to all 3 stages, non-profit village & vendors.</p>
             </div>
-            <div class="btn-price"> 
-
+            <div class="btn-price">
+                <div class="entrada__controles">
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--menos"
+                        aria-label="Quitar una entrada de día">
+                        −
+                    </button>
+                    <span class="contador__cantidad" aria-live="polite">0</span>
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--mas"
+                        aria-label="Añadir una entrada de día">
+                        +
+                    </button>
+                </div>
             </div>
         </div>
         <div class="ticket-price">
             <div class="vip-field-passes">
-                <p class="ticket-description">VIP ACCESS</p>
-                <img src="media/photos/green-flower 2.webp" alt="">
+                <div class="ticket-intro">
+                    <p class="ticket-description">VIP ACCESS</p><img src="media/photos/green-flower 2.webp" alt="">
+                </div>
                 <h2>Vip Field Entry.</h2>
                 <p>Express entry, front-stage viewing pit, shaded AC lounge & collectible pin set</p>
             </div>
             <div class="btn-price">
-
+                <div class="entrada__controles">
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--menos"
+                        aria-label="Quitar una entrada de día">
+                        −
+                    </button>
+                    <span class="contador__cantidad" aria-live="polite">0</span>
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--mas"
+                        aria-label="Añadir una entrada de día">
+                        +
+                    </button>
+                </div>
             </div>
         </div>
         <div class="ticket-price">
             <div class="early-bird">
-                <p class="ticket-description">BEST VALUE</p>
-                <img src="media/photos/pink-flower.webp" alt="">
+                <div class="ticket-intro">
+                    <p class="ticket-description">BEST VALUE</p>
+                    <img src="media/photos/pink-flower.webp" alt="">
+                </div>
                 <h2> Early Bird entry.</h2>
                 <p>Limited discounted tier single-day festival pass.</p>
             </div>
             <div class="btn-price">
-
+                <div class="entrada__controles">
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--menos"
+                        aria-label="Quitar una entrada de día">
+                        −
+                    </button>
+                    <span class="contador__cantidad" aria-live="polite">0</span>
+                    <button
+                        type="button"
+                        class="contador__boton contador__boton--mas"
+                        aria-label="Añadir una entrada de día">
+                        +
+                    </button>
+                </div>
             </div>
         </div>
+        </section>
+        
+        <aside class="resumen" aria-labelledby="resumen-titulo">
+                    <h2 class="resumen__titulo" id="resumen-titulo">Resumen</h2>
+
+                    <!-- El JavaScript rellena esta lista con las entradas elegidas -->
+                    <ul class="resumen__lista" id="resumen-lista">
+                        <li class="resumen__vacio">Todavía no has elegido ninguna entrada.</li>
+                    </ul>
+
+                    <dl class="resumen__cuentas">
+                        <div class="resumen__fila">
+                            <dt>Entradas</dt>
+                            <dd id="total-entradas">0</dd>
+                        </div>
+                        <div class="resumen__fila">
+                            <dt>Subtotal</dt>
+                            <dd id="subtotal">0,00 €</dd>
+                        </div>
+                        <div class="resumen__fila">
+                            <dt>Gastos de gestión <small>(1,50 € por entrada)</small></dt>
+                            <dd id="gastos">0,00 €</dd>
+                        </div>
+                        <div class="resumen__fila resumen__fila--total">
+                            <dt>Total</dt>
+                            <dd id="total">0,00 €</dd>
+                        </div>
+                    </dl>
+
+                    <button type="submit" class="boton boton--rosa" id="boton-comprar" disabled>
+                        Comprar entradas
+                    </button>
+
+                    <!-- Aquí aparecen los avisos de error o de compra realizada -->
+                    <p class="mensaje" id="mensaje" role="status" aria-live="polite"></p>
+        </aside>
     </section>
     
 
