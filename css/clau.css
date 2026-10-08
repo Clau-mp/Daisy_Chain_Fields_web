@@ -96,7 +96,7 @@ body >.intro-active{
     align-items: center;
     justify-content: center;
     opacity: 0;
-    animation: introFade 7s ease-in-out forwards;
+    animation: introFade 5s ease-in-out forwards;
 }
 @keyframes introFade {
     0% { opacity: 0;}
