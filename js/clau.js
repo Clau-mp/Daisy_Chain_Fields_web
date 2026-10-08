@@ -1,4 +1,29 @@
 
+// INTRO
+
+(function(){
+    var intro = document.getElementById("intro");
+    if(!intro){
+        document.body.classList.remove("intro-active");
+        return;
+    }
+    var seen = false;
+    try { seen = sessionStorage.getItem("introSeen") === "1";} catch(e){}
+    function endIntro(){
+        if (intro.parentNode) intro.remove();
+        document.body.classList.remove("intro-active");
+    }
+    if (seen){
+        endIntro();
+        return;
+    }
+    try { sessionStorage.setItem("introSeen", "1");} catch(e){}
+    intro.addEventListener("animationend", function(e){
+        if (e.target === intro) endIntro();
+    });
+    setTimeout(endIntro, 8000);
+})();
+
 // Menu hamburguesa
 
 (function (){
