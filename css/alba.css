@@ -181,9 +181,6 @@
 .mapa-elementos > .yellow-flower {
     position: absolute;
     width: 15%;
-    right: 2%;
-    bottom: 2%;
-    height: auto;
     z-index: 4;
 }
 

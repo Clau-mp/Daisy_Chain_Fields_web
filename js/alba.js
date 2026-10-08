@@ -10,7 +10,7 @@ var GASTOS_POR_ENTRADA = 1.5;   // gastos de gestión por cada entrada
 var MAXIMO_POR_TIPO = 10;       // máximo de entradas de cada tipo
 
 var formulario = document.querySelector('#formulario-compra');
-var entradas = document.querySelectorAll('.entrada');
+var ticket-price = document.querySelectorAll('.entrada');
 
 var resumenLista = document.querySelector('#resumen-lista');
 var totalEntradasTexto = document.querySelector('#total-entradas');
