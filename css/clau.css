@@ -209,7 +209,7 @@ header{
     transform: rotate(70deg)!important;
 }
 
-.main-logo >img{
+.main-logo > a >img{
     display: block;
     height: 3rem;
 }
@@ -1016,7 +1016,7 @@ header{
         padding: 0 1.2rem;
     }
 
-    .main-logo > img {
+    .main-logo > a >img {
         height: 2.5rem;
     }
     .icons-menu{
@@ -1220,7 +1220,7 @@ header{
         padding: 0 0.8rem;
     }
 
-    .main-logo > img {
+    .main-logo > a > img {
         height: 1.6rem;
         padding-left: 0.3rem;
         padding-right: 0.3rem;
