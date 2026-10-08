@@ -1000,6 +1000,15 @@ header{
 /* Media queries */
 
 @media screen and (max-width:768px){
+     
+    /* INTRO */
+
+    .intro-flower{
+        width: 7.5rem;
+    }
+    .intro-logo{
+        max-width: 45rem;
+    }
 
     /* barra de navegación */
 
@@ -1196,6 +1205,16 @@ header{
 
 @media screen and (max-width:480px) {
    
+    /* INTRO */
+
+    .intro-flower{
+        width: 5rem;
+    }
+    .intro-logo{
+        max-width: 27rem;
+    }
+    .intro-signature{ width: 2.5rem;}
+
     /* barra de navegación  */
     header{
         padding: 0 0.8rem;
