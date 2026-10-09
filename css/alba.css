@@ -253,7 +253,8 @@
 /* imagen de fondo */
 
 .tickets {
-    padding: 12rem 10rem;
+    margin-top: var(--nav-h);
+    padding: 7.5rem 2.9rem;
     background-image: url(flores_naranjas.webp);
     background-size: cover;
     background-position: center;
@@ -596,25 +597,88 @@
 
 
 
-@media  (max-width: 778px) {
-    .tickets {
+@media screen and (max-width:768px) {
+    /* TICKETS */
+    .tickets{
         grid-template-columns: 1fr;
-        padding: 3rem 1,5rem;
+        padding: 8rem 1.5rem 4rem;
     }
-    .resumen {
+    .titulo-tickets{
+        margin-bottom: 2rem;
+    }
+    .titulo-tickets > h1{
+        font-size: 2.12rem;
+        padding: 0 0 1rem;
+    }
+    .titulo-tickets > h3{
+        font-size: 1.5rem;
+    }
+    .tickets-list, .resumen{
         grid-column: 1;
+    }
+    .resumen{
         position: static;
+        margin-top: 1rem;
+    }
+    .ticket-price{
+        padding: 1.2rem 1.5rem;
+    }
+    .general-admission > h2, .vip-field-passes > h2, .early-bird > h2{
+        font-size: 1.5rem;
+    }
+    .vip-field-passes > .ticket-intro > img, .early-bird > .ticket-intro > img{
+        width: 2rem;
+        height: auto;
+    }
+    .general-admission > .ticket-intro > img{
+        width: 1.9rem;
+        height: auto;
     }
 }
 
-@media  (max-width: 480) {
-    .tickets {
-        grid-template-columns: 1fr;
-        padding: 3rem 1,5rem;
+@media screen and (max-width:480px){
+   
+    /* TICKETS */
+    
+    .tickets{
+        padding: 7rem 1rem 3rem;
     }
-    .resumen {
-        grid-column: 1;
-        position: static;
+    .titulo-tickets > h1{
+        font-size: 1.625rem;
+    }
+    .titulo-tickets > h3{
+        font-size: 1.125rem;
+    }
+    .ticket-price{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 1.2rem;
+    }
+    .btn-price{
+        padding: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .general-admission > h2, .vip-field-passes > h2, .early-bird > h2{
+        font-size: 1.375rem;
+    }
+    .general-admission > :last-child, .vip-field-passes > :last-child, .early-bird > :last-child{
+        font-size: 1.25rem;
+        padding: 0.7rem;
+    }
+    .resumen{
+        padding: 1.2rem;
+    }
+    .resumen__fila > dt{
+        white-space: normal;
+    }
+    .resumen__fila--total{
+        font-size: 1.2rem;
+    }
+    .resumen__cuentas > .boton{
+        width: 100%;
+    
     }
 }
 
