@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daisy Chain Fields-Tickets</title>
     <link rel="icon" type="image/x-icon" href="media/icons/favicon.ico">
-    <link rel="stylesheet" href="css/clau.css">
-    <link rel="stylesheet" href="css/alba.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akt:wght@100..900&family=Archivo+Black&family=Libre+Franklin:ital@0;1&family=STIX+Two+Text:ital@0;1&display=swap" rel="stylesheet">
@@ -35,7 +34,43 @@
             </ul>
         </nav>
     </header>
-
+     <!-- sing up -->
+    <button id="close-sing-up-btn" class="sing-up-btn">sing up <span>▲</span></button>
+    
+    <div id="sing-up-background" class="sing-up-background">
+        <div id="open-sing-up-modal" class="sing-up-modal">
+            <button class="close-modal-btn" id="close-modal-btn">X</button>
+            <img class="modal-logo" src="media/photos/Daisy-Chain-Black-logo.webp" alt="Daisy Chain Logo">
+            <p class="sing-up-title-text">sign up to receive updates from:</p>
+            <form class="form-sing-up" required>
+                <input class="enter-email-input" type="email" name="email" placeholder="Enter your email:" required>
+                <select class="select-country" name="country" id="country" required>
+                    <option value="" data-pref="">Country</option>
+                    <option data-pref="+34">Spain</option>
+                    <option data-pref="+1">United States</option>
+                    <option data-pref="+44">United Kingdom</option>
+                    <option data-pref="+52">Mexico</option>
+                    <option data-pref="+1">Canada</option>
+                    <option data-pref="+33">France</option>
+                    <option data-pref="+39">Italy</option>
+                </select>
+                <p class="phone-number-text">Only provide a mobile number if you want to receive SMS updates:</p>
+                <input class="phone-number-input" type="tel" id="phone-number-input" name="phone-number" placeholder="+35" required>
+                <div class="sing-up-cheks">
+                    <p>Sign up to receive email updates and the presale code from:</p>
+                    <label class="sing-up-check">
+                        <input type="checkbox" value="Daisy Chain Fields" name="artist">Daisy Chain Fields
+                    </label>
+                    <label class="sing-up-check">
+                        <input type="checkbox" value="Olivia Rodrigo" name="artist" >Olivia Rodrigo
+                    </label>
+                </div>
+                 <button type="submit" class="submit-btn">SING UP</button>
+            </form>
+            <p class="legal-text-sing-up">emails will be sent by or on behalf of umg recordings services, inc. 2220 colorado avenue, santa monica, ca 90404 (310) 865-4000. you may withdraw your consent at any time. see privacy policy at http://privacy.umusic.com.﻿</p>
+        
+        </div>
+    </div>
     <section class="tickets">
         <div class="titulo-tickets">
             <h1 class="tickets-maintitle">SELECT YOUR TICKETS BELOW!</h1>
@@ -194,8 +229,6 @@
         </div>
     </footer>
 
-    <script src="js/alba.js"></script>
-    <script src="js/clau.js"></script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
