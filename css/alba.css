@@ -1,14 +1,15 @@
 @font-face {
-    font-family: The Bold Font;
-    src: url(../media/fonts/THEBOLDFONT-FREEVERSION.otf);
+    font-family: "The Bold Font";
+    src: url("../media/fonts/THEBOLDFONT-FREEVERSION.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
-:root{
+:root {
 
     /* Tipografias */
-    --main-font: "Libre Franklin", sans-serif; 
+    --main-font: "Libre Franklin", sans-serif;
     --title-font: "The Bold Font", sans-serif;
 
     /* Pesos tipografia Libre Franklin */
@@ -16,41 +17,36 @@
     --LF-bold: 700;
     --LF-extrabold: 900;
 
-    /* Colores  */
-
+    /* Colores */
     --pastel-pink: #FDAFCB;
     --dark-pink: #E06286;
     --yellow: #FFE778;
     --green: #89D886;
     --orange: #FFA961;
-    --blue: #73E6FF; 
+    --blue: #73E6FF;
     --pastel-white: #FDFBF0;
     --white: #FFFFFF;
     --black: #1A1A1A;
 
-    /* Tamaño de fuentes  */
+    /* Tamaño de fuentes */
+    --medium-text-size: 1.3rem;
+    --title-text-size: 2rem;
+    --bt-text-size: 1.4rem;
 
-    --medium-text-size:1.3rem;
-    --title-text-size:2rem;
-    --bt-text-size:1.4rem;
-
-    --title-text-size-tablet:1.7rem;
+    --title-text-size-tablet: 1.7rem;
     --bt-text-size-tablet: 1.2rem;
 
-    --title-text-size-phone:1.5rem;
+    --title-text-size-phone: 1.5rem;
     --bt-text-size-phone: 0.9rem;
-    
-    --nav-h: 6rem;
-    --btn-transition: transform 0.3s ease, color 0.3s ease;
-    --text-transition: color 0.2s ease;
-     
-    /* Transiciones y medidas */
-    --nav-h: 6rem;
-    --btn-transition: transform 0.3s ease, color 0.3s ease;
-    --text-transition: color 0.5s ease;
-    --shadow:0 0.20rem 0.62rem rgb(0,0,0,0.3);
-    --rotate-badge-animation:rotateBadge 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 
+    /* Transiciones y medidas (antes estaban duplicadas) */
+    --nav-h: 6rem;
+    --radius: 0.5rem;
+    --radius-lg: 1rem;
+    --btn-transition: transform 0.3s ease, color 0.3s ease;
+    --text-transition: color 0.3s ease;
+    --shadow: 0 0.20rem 0.62rem rgb(0, 0, 0, 0.3);
+    --rotate-badge-animation: rotateBadge 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 }
 
 /* FOOTER */
@@ -113,152 +109,183 @@
     align-items: center;
 }
 
-/* MAPA  */
+.redes-sociales > a:hover {
+    color: var(--dark-pink);
+}
+
+/* MAPA */
 
 .mapa {
     box-sizing: border-box;
     width: 100%;
     padding: 12rem 10rem;
-    background-image: url(cesped_textura.webp);
+    background-color: var(--green);
+    background-image: url("cesped_textura.webp");
     background-size: cover;
     background-position: center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     text-align: center;
+    overflow-x: clip;
 }
 
-.titulo-mapa > .texto-mapa > h1 {
-    /* color: var(--white); */
+.map-maintitle {
+    margin: 0;
+    padding: 2rem clamp(0rem, 6vw, 6rem);
     text-align: center;
-    padding: 2rem 6rem;
     font-family: var(--title-font);
-    font-size: 40px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.titulo-mapa > .texto-mapa > h3 {
+.map-subtitle {
     margin: 0 0 3rem;
     text-align: center;
     font-family: var(--title-font);
-    font-size: 30px;
+    font-size: clamp(1.1rem, 3vw, 1.875rem);
 }
 
 .mapa-elementos {
     position: relative;
     max-width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 4rem; 
 }
 
 .mapa-elementos > .mapa-imagen {
-    padding: 1rem;
-    background-color: var(--pastel-white);    
-    border-radius: 1rem;
+    position: relative; 
+    z-index: 2;
     display: block;
     margin: 3rem;
+    padding: 1rem;
+    background-color: var(--pastel-white);
+    border-radius: var(--radius-lg);
 }
 
-.mapa-elementos > .mapa-imagen > img{
-    border-image-width: 1rem;
+.mapa-elementos > .mapa-imagen > img {
+    display: block;
     width: 100%;
     height: auto;
-    border-radius: 1rem;
-    z-index: 2;
+    border-radius: var(--radius-lg);
+}
+
+.modal {
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-width: 95vw;
+    max-height: 95vh;
+}
+
+#mapaGrande {
+    display: block;
+    max-width: 95vw;
+    max-height: 95vh;
+    cursor: zoom-out;
 }
 
 .mapa-elementos > .chapas-mapa {
     position: absolute;
     left: -13%;
     bottom: -20%;
+    width: 25%;
     z-index: 3;
+    pointer-events: none;
 }
 
 .mapa-elementos > .chapas-mapa > img {
-    width: 60%;
-    top: 0;
-    left: 0;
+    display: block;
+    width: 100%;
+    height: auto;
     transform: rotate(-8deg);
-    z-index: 1;
 }
 
-.mapa-elementos > .yellow-flower {
-    position: absolute;
-    width: 15%;
-    z-index: 4;
-}
-
-.mapa-elementos > .texto-postit {
+.mapa-elementos > .postit {
     position: absolute;
     right: -3%;
     bottom: -26%;
     width: 25%;
     transform: rotate(8deg);
-    text-decoration: none;
-    z-index: 1;
+    z-index: 3;
 }
 
-.mapa-elementos > .texto-postit > img {
+.postit > img {
     display: block;
-    width: 90%;
+    width: 100%;
     height: auto;
 }
 
-.mapa-elementos > .texto-postit > p {
-    font-size: var(--bt-text-size);
-    font-family: var(--main-font);
+.postit > .texto-postit {
     position: absolute;
+    inset: 0;
     margin: 0;
-    padding: 20% 5%;
+    padding: 12% 10%;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
-
+    text-align: center;
+    font-size: clamp(0.7rem, 1.4vw, var(--bt-text-size));
+    font-family: var(--main-font);
 }
 
 /* SETLIST */
 
 .titulo-setlist {
     padding: 12rem 10rem;
-    background-image: url(papel_textura.webp);
+    background-color: var(--pastel-white);
+    background-image: url("papel_textura.webp");
     background-size: cover;
     background-position: center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     align-content: center;
 }
 
 .titulo-setlist > div > h1 {
     text-align: center;
     padding: 30px 100px;
-    font: var(--title-font);
+    font-family: var(--title-font);
     font-weight: 900;
     font-size: 50px;
 }
 
 .titulo-setlist > div > h3 {
     text-align: center;
-    font: var(--title-font);
+    font-family: var(--title-font);
     font-weight: 900;
     font-size: 35px;
 }
 
+.titulo-setlist > .setlist-imagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
 .titulo-setlist > .setlist-imagen > img {
-    background-size: cover;
+    display: block;
+    width: 100%;
     max-width: 30rem;
-    border-radius: 1rem;
     border: 1rem solid var(--pastel-white);
-    border-image-width: 1rem;
-    margin-top: 4rem;
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+}
+
+.flower_1 {
+    position: absolute;
+    width: 4.5rem;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* TICKETS */
 
-/* imagen de fondo */
-
 .tickets {
     margin-top: var(--nav-h);
     padding: 7.5rem 2.9rem;
-    background-image: url(flores_naranjas.webp);
+    background-color: var(--orange);
+    background-image: url("../media/photos/flores_naranjas.webp");
     background-size: cover;
     background-position: center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     width: 100%;
     display: grid;
     align-items: start;
@@ -295,162 +322,78 @@
     margin: 0 0 2rem;
     padding: 1.5rem 2.5rem;
     background-color: var(--pastel-white);
-    border-radius: 1rem;
+    border-radius: var(--radius-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* general admission box */
+.general-admission { --ticket-color: var(--yellow); }
+.vip-field-passes  { --ticket-color: var(--green); }
+.early-bird        { --ticket-color: var(--pastel-pink); }
 
 .ticket-description {
     font-size: 15px;
     padding: 0.5rem 1rem;
     font-family: var(--main-font);
-    border-radius: 0.5rem;
+    border-radius: var(--radius);
     max-width: fit-content;
     display: inline-block;
 }
-
-.general-admission > .ticket-intro > .ticket-description {
-    background-color: var(--yellow);
+.general-admission .ticket-description,
+.vip-field-passes .ticket-description,
+.early-bird .ticket-description {
+    background-color: var(--ticket-color);
 }
 
-.vip-field-passes > .ticket-intro > .ticket-description {
-    background-color: var(--green);
-}
-
-.early-bird > .ticket-intro > .ticket-description {
-    background-color: var(--pastel-pink);
-}
-
-/* general admission */
-
-.general-admission > h2 {
-    font-family: var(--title-font);
-    font-size: 28px;
-}
-
-.general-admission > .ticket-intro {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.general-admission > .ticket-intro > img {
-    width: 7%;
-    height: 7%;
-    left: 37%;
-    bottom: 23%;
-    display: flex;
-}
-
-.general-admission > .tickets-subtitle {
-    font-family: var(--main-font);
-    font-size: 13px;
-    margin: 0.5rem 0;
-}
-
-.general-admission > :last-child {
-    font-family: var(--main-font);
-    width: fit-content;
-    font-size: 25px;
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border: 3px solid var(--yellow);
-    border-radius: 1rem;
-}
-
-/* vip field pass */
-
-.vip-field-passes > h2 {
-    font-family: var(--title-font);
-    font-size: 28px;
-}
-
-.vip-field-passes > .ticket-intro {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.vip-field-passes > .ticket-intro > img {
-    width: 7%;
-    height: 7%;
-    left: 37%;
-    bottom: 23%;
-    display: flex;
-}
-
-.vip-field-passes > .tickets-subtitle {
-    font-family: var(--main-font);
-    font-size: 13px;
-    margin: 0.5rem 0;
-}
-
-.vip-field-passes > :last-child {
-    font-family: var(--main-font);
-    width: fit-content;
-    font-size: 25px;
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border: 3px solid var(--green);
-    border-radius: 1rem;
-}
-
-/* early bird */
-
+.general-admission > h2,
+.vip-field-passes > h2,
 .early-bird > h2 {
     font-family: var(--title-font);
     font-size: 28px;
 }
 
+.general-admission > .ticket-intro,
+.vip-field-passes > .ticket-intro,
 .early-bird > .ticket-intro {
     display: flex;
     gap: 1rem;
     margin: 1rem 0;
 }
 
+.general-admission > .ticket-intro > img,
+.vip-field-passes > .ticket-intro > img,
 .early-bird > .ticket-intro > img {
     width: 7%;
-    height: 7%;
-    left: 37%;
-    bottom: 23%;
-    display: flex;
+    min-width: 2rem;
+    height: auto;
 }
 
+.general-admission > .tickets-subtitle,
+.vip-field-passes > .tickets-subtitle,
 .early-bird > .tickets-subtitle {
     font-family: var(--main-font);
     font-size: 13px;
     margin: 0.5rem 0;
 }
 
+.general-admission > :last-child,
+.vip-field-passes > :last-child,
 .early-bird > :last-child {
     font-family: var(--main-font);
     width: fit-content;
     font-size: 25px;
     margin: 0.5rem 0;
     padding: 1rem;
-    border: 3px solid var(--pastel-pink);
-    border-radius: 1rem;
+    border: 3px solid var(--ticket-color);
+    border-radius: var(--radius-lg);
 }
 
 /* BOTON DE PRECIO */
 
-
-/* .entrada__controles {
-    display: flex;
-    align-items: center;
-    font-family: var(--main-font);
-    font-size: 20px;
-    border: 3px solid var(--orange);
-    border-radius: 0.5rem;
-    overflow: hidden;
-} */
-
 .btn-price {
     height: auto;
-    border-radius: 1rem;
+    border-radius: var(--radius-lg);
     padding: 0 0 0 1rem;
     display: flex;
     align-items: center;
@@ -460,7 +403,7 @@
 .entrada__controles {
     display: flex;
     align-items: center;
-    border-radius: 1rem;
+    border-radius: var(--radius-lg);
     background-color: var(--white);
     overflow: hidden;
 }
@@ -484,27 +427,34 @@
     line-height: 2.8rem;
 }
 
-/* color boton contador */
-
-.general-admission > .contador__boton {
+.general-admission .contador__boton,
+.ticket-price:has(.general-admission) .contador__boton {
     background-color: var(--yellow);
 }
 
-.early-bird > .contador__boton {
+.vip-field-passes .contador__boton,
+.ticket-price:has(.vip-field-passes) .contador__boton {
     background-color: var(--green);
 }
 
-/* resumen de las entradas */
+.early-bird .contador__boton,
+.ticket-price:has(.early-bird) .contador__boton {
+    background-color: var(--pastel-pink);
+}
+
+/* RESUMEN DE LAS ENTRADAS */
+
 .resumen {
     grid-column: 2;
     position: sticky;
-    top: 1.5rem;
-    background: var(--pastel-white);
+    top: calc(var(--nav-h) + 1rem); 
+    display: flex;
     flex-direction: column;
     gap: 1.2rem;
     padding: 1.5rem;
+    background: var(--pastel-white);
     border: none;
-    border-radius: 1rem;
+    border-radius: var(--radius-lg);
 }
 
 .resumen > h2 {
@@ -524,16 +474,13 @@
     justify-content: space-between;
     gap: 1rem;
     font-size: 0.95rem;
-    color: var(--black)
-
+    color: var(--black);
 }
 
 .resumen__vacio {
-    color: var(--white);
     font-style: italic;
     font-family: var(--main-font);
-    color: var(--black)
-
+    color: var(--black);
 }
 
 .resumen__cuentas {
@@ -542,7 +489,7 @@
     flex-direction: column;
     gap: 0.4rem;
     padding-top: 1rem;
-    border-top: 6px;
+    border-top: 2px solid rgb(0, 0, 0, 0.15);
 }
 
 .resumen__fila {
@@ -552,21 +499,13 @@
     gap: 1rem;
 }
 
-.resumen__cuentas > .resumen__fila--total {
-    border-radius: 0.5rem;
-}
-
 .resumen__fila dt small {
     display: block;
     font-size: 0.8rem;
-    color: var(--white);
+    color: var(--black);
 }
 
-.resumen__fila dd {
-    font-weight: 700;
-    white-space: nowrap;
-}
-
+.resumen__fila dd,
 .resumen__fila dt {
     font-weight: 700;
     white-space: nowrap;
@@ -578,8 +517,11 @@
     font-family: var(--main-font);
     font-size: 1.4rem;
     background: var(--yellow);
-    border: 6px;
     border-radius: var(--radius);
+}
+
+.resumen__fila--total dd {
+    font-weight: 400;
 }
 
 .resumen__cuentas > .boton {
@@ -587,97 +529,234 @@
     background-color: var(--orange);
     font-family: var(--main-font);
     font-size: var(--bt-text-size);
-    border-radius: 0.5rem;
+    border-radius: var(--radius);
     padding: 0.6rem 0.8rem;
 }
 
-.resumen__fila--total dd {
-    font-weight: 400;
+   /* RESPONSIVE */
+
+@media screen and (max-width: 1024px) {
+
+    /* MAPA */
+    .mapa {
+        padding: 9rem 3rem;
+    }
+
+    .mapa-elementos {
+        max-width: 90%;
+    }
+
+    /* SETLIST */
+    .titulo-setlist {
+        padding: 9rem 3rem;
+    }
 }
 
+@media screen and (max-width: 768px) {
 
+    /* FOOTER */
+    #footer {
+        padding: 1rem 1.5rem;
+    }
 
-@media screen and (max-width:768px) {
+    .patrocinadores-footer {
+        margin: 1.5rem 0;
+        padding: 1.5rem 0;
+    }
+
+    .patrocinadores-footer img {
+        height: 2.5rem;
+        max-width: 7rem;
+    }
+
+    .redes-sociales > a {
+        margin: 1rem;
+        width: auto;
+    }
+
+    .copyright-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright-footer > span {
+        display: none;
+    }
+
+    /* MAPA */
+    .mapa {
+        padding: 8rem 1.5rem 7rem;
+    }
+
+    .map-maintitle {
+        padding: 1rem 0;
+    }
+
+    .map-subtitle {
+        margin-bottom: 1.5rem;
+    }
+
+    .mapa-elementos {
+        max-width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .mapa-elementos > .mapa-imagen {
+        margin: 1.5rem 0;
+        padding: 0.6rem;
+    }
+
+    .mapa-elementos > .chapas-mapa {
+        left: -4%;
+        bottom: -14%;
+        width: 32%;
+    }
+
+    .mapa-elementos > .postit {
+        right: 0;
+        bottom: -18%;
+        width: 36%;
+    }
+
+    .postit > .texto-postit {
+        font-size: 0.7rem;
+        padding: 10% 8%;
+    }
+
+    /* SETLIST */
+    .titulo-setlist {
+        padding: 8rem 1.5rem 5rem;
+    }
+
+    .titulo-setlist > div > h1 {
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .titulo-setlist > div > h3 {
+        font-size: 1.4rem;
+    }
+
     /* TICKETS */
-    .tickets{
+    .tickets {
         grid-template-columns: 1fr;
         padding: 8rem 1.5rem 4rem;
     }
-    .titulo-tickets{
+
+    .titulo-tickets {
         margin-bottom: 2rem;
     }
-    .titulo-tickets > h1{
+
+    .titulo-tickets > h1 {
         font-size: 2.12rem;
         padding: 0 0 1rem;
     }
-    .titulo-tickets > h3{
+
+    .titulo-tickets > h3 {
         font-size: 1.5rem;
     }
-    .tickets-list, .resumen{
-        grid-column: 1;
+
+    .ticket-list,
+    .resumen {
+        grid-column: 1; 
     }
-    .resumen{
+
+    .resumen {
         position: static;
         margin-top: 1rem;
     }
-    .ticket-price{
+
+    .ticket-price {
         padding: 1.2rem 1.5rem;
     }
-    .general-admission > h2, .vip-field-passes > h2, .early-bird > h2{
+
+    .general-admission > h2,
+    .vip-field-passes > h2,
+    .early-bird > h2 {
         font-size: 1.5rem;
     }
-    .vip-field-passes > .ticket-intro > img, .early-bird > .ticket-intro > img{
+
+    .vip-field-passes > .ticket-intro > img,
+    .early-bird > .ticket-intro > img {
         width: 2rem;
         height: auto;
     }
-    .general-admission > .ticket-intro > img{
+
+    .general-admission > .ticket-intro > img {
         width: 1.9rem;
         height: auto;
     }
 }
 
-@media screen and (max-width:480px){
-   
+@media screen and (max-width: 480px) {
+
+    /* FOOTER */
+    .redes-sociales > a {
+        font-size: 1.6rem;
+        margin: 0.7rem;
+    }
+
+    .copyright-footer {
+        font-size: 0.8rem;
+    }
+
+    /* MAPA */
+    .mapa {
+        padding: 7rem 1rem 6rem;
+    }
+
     /* TICKETS */
-    
-    .tickets{
+    .tickets {
         padding: 7rem 1rem 3rem;
     }
-    .titulo-tickets > h1{
+
+    .titulo-tickets > h1 {
         font-size: 1.625rem;
     }
-    .titulo-tickets > h3{
+
+    .titulo-tickets > h3 {
         font-size: 1.125rem;
     }
-    .ticket-price{
+
+    .ticket-price {
         flex-direction: column;
         justify-content: flex-start;
         gap: 1rem;
         padding: 1.2rem;
     }
-    .btn-price{
+
+    .btn-price {
         padding: 0;
         width: 100%;
         justify-content: flex-start;
     }
-    .general-admission > h2, .vip-field-passes > h2, .early-bird > h2{
+
+    .general-admission > h2,
+    .vip-field-passes > h2,
+    .early-bird > h2 {
         font-size: 1.375rem;
     }
-    .general-admission > :last-child, .vip-field-passes > :last-child, .early-bird > :last-child{
+
+    .general-admission > :last-child,
+    .vip-field-passes > :last-child,
+    .early-bird > :last-child {
         font-size: 1.25rem;
         padding: 0.7rem;
     }
-    .resumen{
+
+    .resumen {
         padding: 1.2rem;
     }
-    .resumen__fila > dt{
+
+    .resumen__fila > dt {
         white-space: normal;
     }
-    .resumen__fila--total{
+
+    .resumen__fila--total {
         font-size: 1.2rem;
     }
-    .resumen__cuentas > .boton{
+
+    .resumen__cuentas > .boton {
         width: 100%;
-    
     }
 }
