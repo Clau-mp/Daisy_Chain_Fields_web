@@ -1,13 +1,7 @@
-/* =========================================================
-   MIAUFEST · Cálculo del precio de las entradas
-   JavaScript nativo y sencillo (ES5): var, function,
-   querySelector/querySelectorAll y bucles for.
-   ========================================================= */
-
 /* ---------- 1. DATOS Y ELEMENTOS ---------- */
 
-var GASTOS_POR_ENTRADA = 1.5;   // gastos de gestión por cada entrada
-var MAXIMO_POR_TIPO = 10;       // máximo de entradas de cada tipo
+var GASTOS_POR_ENTRADA = 1.5;
+var MAXIMO_POR_TIPO = 10;
 
 var entradas = document.querySelectorAll('.ticket-price');
 
@@ -21,6 +15,7 @@ var botonComprar = document.querySelector('#boton-comprar');
 var mensaje = document.querySelector('#mensaje');
 
 /* ---------- 2. FUNCIONES DE AYUDA ---------- */
+
 function formatearPrecio(numero) {
     return numero.toFixed(2).replace('.', ',') + ' €';
 }
@@ -55,10 +50,7 @@ function borrarMensaje() {
     mensaje.className = 'mensaje';
 }
 
-
-
 /* ---------- 3. CÁLCULO DEL TOTAL ---------- */
-// Recorre todas las entradas, calcula subtotales y actualiza el resumen.
 
 function actualizarTotal() {
     var totalEntradas = 0;
@@ -107,10 +99,7 @@ function actualizarTotal() {
     botonComprar.disabled = (totalEntradas === 0);
 }
 
-
 /* ---------- 4. BOTONES + Y − DE CADA ENTRADA ---------- */
-// La función recibe UNA entrada y conecta sus dos botones.
-// (Así cada botón sabe a qué entrada pertenece.)
 
 function conectarContador(entrada) {
     var botonMenos = entrada.querySelector('.contador__boton--menos');
@@ -138,3 +127,13 @@ function conectarContador(entrada) {
 for (var i = 0; i < entradas.length; i++) {
     conectarContador(entradas[i]);
 }
+
+// BOTON COMPRAR
+
+botonComprar.addEventListener('click', function () {
+    for (var i = 0; i < entradas.length; i++) {
+        escribirCantidad(entradas[i], 0);
+    }
+    actualizarTotal();
+    mostrarMensaje('¡Gracias por tu compra!', 'ok');
+});
