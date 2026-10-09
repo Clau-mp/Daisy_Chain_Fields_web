@@ -137,3 +137,9 @@ botonComprar.addEventListener('click', function () {
     actualizarTotal();
     mostrarMensaje('¡Gracias por tu compra!', 'ok');
 });
+
+
+const modal = document.getElementById('modal');
+
+document.getElementById('miniatura').addEventListener('click', () => modal.showModal());
+modal.addEventListener('click', () => modal.close());
