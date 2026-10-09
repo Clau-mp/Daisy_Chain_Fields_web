@@ -83,30 +83,32 @@ var selectCountry = document.getElementById("country");
 var phoneNumber = document.getElementById("phone-number-input");
 
 function openModal(){
-    showSingUp.classList.add("open");
-    openSingUp.classList.add("open");
+    if (showSingUp) showSingUp.classList.add("open");
+    if (openSingUp) openSingUp.classList.add("open");
 }
 function closeModal(){
-    showSingUp.classList.remove("open");
-    openSingUp.classList.remove("open");
+    if (showSingUp) showSingUp.classList.remove("open");
+   if (openSingUp) openSingUp.classList.remove("open");
 }
 
 if (openSingUp) openSingUp.addEventListener("click", openModal);
 if (closeSingUp) closeSingUp.addEventListener("click", closeModal);
 
-
-showSingUp.addEventListener("click", function(e){
-    if (e.target === showSingUp){
-        closeModal();
-    }
-})
-selectCountry.addEventListener("change", function(){
-    var prefix = selectCountry.options[selectCountry.selectedIndex].dataset.pref;
-    if(prefix && (!phoneNumber.value|| /^\+\d*$/.test(phoneNumber.value))){
-        phoneNumber.value = prefix
-    }
-});
-
+if(showSingUp){
+    showSingUp.addEventListener("click", function(e){
+        if (e.target === showSingUp){
+            closeModal();
+        }
+    })
+}
+if(selectCountry && phoneNumber){
+    selectCountry.addEventListener("change", function(){
+        var prefix = selectCountry.options[selectCountry.selectedIndex].dataset.pref;
+        if(prefix && (!phoneNumber.value|| /^\+\d*$/.test(phoneNumber.value))){
+            phoneNumber.value = prefix
+        }
+    });
+}
 
 // Hero
 
@@ -190,22 +192,25 @@ var donatePinModalImg = document.getElementById("pin-modal-img");
 var donatePinContent = document.getElementById("pin-modal-content");
 
 function closeDonateModal(){
-    pinModalBackground.classList.remove("open");
+    if (pinModalBackground) pinModalBackground.classList.remove("open");
     document.body.classList.remove("modal-open");
 }
-for(var i = 0; i < donatePin.length; i++){
-    donatePin[i].addEventListener("click", function(){
-        var pinImg = this.querySelector("img");
-        var pinInfo = this.querySelector(".donate-pin-info");
+if (donatePin.length > 0 && pinModalBackground && donatePinModalImg && donatePinContent){
+  for(var i = 0; i < donatePin.length; i++){
+        donatePin[i].addEventListener("click", function(){
+            var pinImg = this.querySelector("img");
+            var pinInfo = this.querySelector(".donate-pin-info");
+            if(pinImg && pinInfo){
+                donatePinModalImg.src = pinImg.src;
+                donatePinModalImg.alt = pinImg.alt;
+                donatePinContent.innerHTML = pinInfo.innerHTML;
 
-        donatePinModalImg.src = pinImg.src;
-        donatePinModalImg.alt = pinImg.alt;
-        donatePinContent.innerHTML = pinInfo.innerHTML;
+                pinModalBackground.classList.add("open");
+                document.body.classList.add("modal-open");
+            }
+        });
 
-        pinModalBackground.classList.add("open");
-        document.body.classList.add("modal-open");
-    });
-
+    }
 }
 if (closeDonateModalBtn){closeDonateModalBtn.addEventListener("click", closeDonateModal);}
 if (pinModalBackground){pinModalBackground.addEventListener("click", function(e){
