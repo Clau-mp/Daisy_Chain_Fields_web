@@ -1204,6 +1204,7 @@ header{
         line-height: 1.4rem;
         opacity: 0.8;
     }
+   
 }
 
 @media screen and (max-width:480px) {
@@ -1467,4 +1468,6 @@ header{
     .copyright-footer > p:last-child{
         font-size: 0.7rem;
     }
+
 }
+
