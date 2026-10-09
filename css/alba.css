@@ -617,17 +617,3 @@
         position: static;
     }
 }
-
-/* .footer > .patrocinadores-footer {
-    max-width: 80%;
-    margin: 3rem;
-    padding: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem 5rem;
-    flex-wrap: wrap;
-    filter: grayscale(100);
-    grid-template: repeat(2, 1fr);
-}
-} */
