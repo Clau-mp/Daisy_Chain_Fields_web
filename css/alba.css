@@ -113,6 +113,10 @@
     align-items: center;
 }
 
+.redes-sociales > a:hover {
+    color: var(--dark-pink);
+}
+
 /* MAPA  */
 
 .mapa {
@@ -227,25 +231,43 @@
 .titulo-setlist > div > h1 {
     text-align: center;
     padding: 30px 100px;
-    font: var(--title-font);
+    font-family: var(--title-font);
     font-weight: 900;
     font-size: 50px;
 }
 
 .titulo-setlist > div > h3 {
     text-align: center;
-    font: var(--title-font);
+    font-family: var(--title-font);
     font-weight: 900;
     font-size: 35px;
 }
 
+.titulo-setlist > .setlist-imagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
 .titulo-setlist > .setlist-imagen > img {
-    background-size: cover;
+    display: block;
+    width: 100%;
     max-width: 30rem;
-    border-radius: 1rem;
     border: 1rem solid var(--pastel-white);
-    border-image-width: 1rem;
-    margin-top: 4rem;
+    border-radius: 1rem;
+    box-sizing: border-box
+}
+
+.flower_1 {
+    position: absolute;
+    width: 4.5rem;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.flower_1 {
+
 }
 
 /* TICKETS */
