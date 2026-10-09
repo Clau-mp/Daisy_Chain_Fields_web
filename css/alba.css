@@ -226,6 +226,29 @@
     font-family: var(--main-font);
 }
 
+dialog#modal-mapa{
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+dialog#modal-mapa::backdrop{
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+#mapaGrande{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: zoom-out;
+}
 /* SETLIST */
 
 .titulo-setlist {
